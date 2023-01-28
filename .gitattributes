@@ -1,0 +1,6 @@
+# default
+* text=auto
+
+# normalize CRLF files
+*.sln text eol=crlf
+*.cs text eol=crlf
