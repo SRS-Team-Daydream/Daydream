@@ -50,6 +50,8 @@ namespace Daydream
             Controls = new Controls();
             Gameplay = new GameplayInputReader();
             Controls.Gameplay.SetCallbacks(Gameplay);
+
+            Controls.Gameplay.Enable();
         }
     }
 }
