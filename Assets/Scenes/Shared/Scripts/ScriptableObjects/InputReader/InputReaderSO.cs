@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,17 +16,17 @@ namespace Daydream
 
         public void OnAction(InputAction.CallbackContext context)
         {
-            ActionEvent?.Invoke();
+            if(context.performed) ActionEvent?.Invoke();
         }
 
         public void OnCancel(InputAction.CallbackContext context)
         {
-            CancelEvent?.Invoke();
+            if (context.performed) CancelEvent?.Invoke();
         }
 
         public void OnMenu(InputAction.CallbackContext context)
         {
-            MenuEvent?.Invoke();
+            if (context.performed) MenuEvent?.Invoke();
         }
 
         public void OnMove(InputAction.CallbackContext context)
@@ -35,7 +36,29 @@ namespace Daydream
 
         public void OnSprint(InputAction.CallbackContext context)
         {
-            SprintChangedEvent?.Invoke(context.ReadValueAsButton());
+            if (context.performed || context.canceled) SprintChangedEvent?.Invoke(context.ReadValueAsButton());
+        }
+    }
+
+    public class MenuInputReader : Controls.IMenuActions
+    {
+        public System.Action SubmitEvent;
+        public System.Action CancelEvent;
+        public System.Action<Vector2> MoveChangedEvent;
+
+        public void OnSubmit(InputAction.CallbackContext context)
+        {
+            if (context.performed) SubmitEvent?.Invoke();
+        }
+
+        public void OnCancel(InputAction.CallbackContext context)
+        {
+            if (context.performed) CancelEvent?.Invoke();
+        }
+
+        public void OnMove(InputAction.CallbackContext context)
+        {
+            if (context.performed) MoveChangedEvent?.Invoke(context.ReadValue<Vector2>());
         }
     }
 
@@ -43,14 +66,53 @@ namespace Daydream
     public class InputReaderSO : ScriptableObject
     {
         [System.NonSerialized] public GameplayInputReader Gameplay;
+        [System.NonSerialized] public MenuInputReader Menu;
+
         [System.NonSerialized] public Controls Controls;
+
+        public static InputReaderSO FindInputReaderSO()
+        {
+            if (Application.isPlaying)
+            {
+                Debug.LogError("FindInputReaderSO should only be used in the editor (eg. in Reset)");
+            }
+            string[] guids = AssetDatabase.FindAssets("t:InputReaderSO");
+            foreach(var guid in guids){
+                string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+                InputReaderSO asset = AssetDatabase.LoadAssetAtPath<InputReaderSO>(assetPath);
+                if (asset != null) return asset;
+            }
+            return null;
+        }
 
         public void OnEnable()
         {
             Controls = new Controls();
+
             Gameplay = new GameplayInputReader();
             Controls.Gameplay.SetCallbacks(Gameplay);
 
+            Menu = new MenuInputReader();
+            Controls.Menu.SetCallbacks(Menu);
+
+            EnableGameplay();
+        }
+
+        public void DisableAll()
+        {
+            Controls.Gameplay.Disable();
+            Controls.Menu.Disable();
+        }
+
+        public void EnableMenu()
+        {
+            DisableAll();
+            Controls.Menu.Enable();
+        }
+
+        public void EnableGameplay()
+        {
+            DisableAll();
             Controls.Gameplay.Enable();
         }
     }
