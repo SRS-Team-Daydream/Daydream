@@ -6,6 +6,6 @@ using UnityEngine;
 namespace Daydream
 {
     [CreateAssetMenu(fileName = "PlayerSO", menuName = "Data/Player")]
-    public class PlayerSO : StaticSO<List<Player>>
+    public class PlayerSO : StaticSO<Player>
     {}
 }

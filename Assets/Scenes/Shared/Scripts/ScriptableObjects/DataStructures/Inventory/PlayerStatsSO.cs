@@ -5,7 +5,6 @@ using UnityEngine;
 namespace Daydream
 {
     [CreateAssetMenu(fileName = "PlayerStats", menuName = "Data/PlayerStats")]
-    public class PlayerStatsSO : NPCStatsSO
-    {
-    }
+    public class PlayerStatsSO : CharacterStatsSO
+    {}
 }

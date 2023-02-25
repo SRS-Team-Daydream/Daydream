@@ -7,9 +7,11 @@ namespace Daydream
     [System.Serializable]
     public class Player : Character
     {
-        public string Weapon;
-        public string Accessory;
-        //not sure what stat mods are referring to
+        [SerializeField]
+        public EquippableSO WeaponEquipped;
+
+        [SerializeField]
+        public EquippableSO AccessoryEquipped;
     }
 
 }

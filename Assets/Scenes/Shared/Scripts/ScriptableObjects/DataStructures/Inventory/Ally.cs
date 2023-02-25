@@ -8,8 +8,7 @@ namespace Daydream
     [System.Serializable]
     public class Ally : Character
     {
-        public string Weapon;
-        public string Accessory;
+        public EquippableSO Accessory;
     }
 
 }

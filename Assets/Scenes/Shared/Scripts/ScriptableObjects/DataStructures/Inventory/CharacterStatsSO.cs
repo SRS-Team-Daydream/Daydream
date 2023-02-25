@@ -7,9 +7,6 @@ namespace Daydream
     public class CharacterStatsSO : ScriptableObject
     {
         [SerializeField]
-        public float DefaultHealth;
-
-        [SerializeField]
         public float MaxHealth;
 
         [SerializeField]

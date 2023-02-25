@@ -6,10 +6,10 @@ namespace Daydream
 {
     [System.Serializable]
     public enum Target { 
-        self,
-        friend,
-        foe,
-        everybody
+        Self,
+        Friend,
+        Foe,
+        Everybody
     }
 
 
@@ -25,7 +25,7 @@ namespace Daydream
         public string Description;
 
         [SerializeField]
-        public float ManaCost;
+        public int ManaCost;
 
         [SerializeField]
         public Target AbilityTarget;
@@ -36,11 +36,11 @@ namespace Daydream
         [SerializeField]
         public float Pierce;
 
-        //effect swap out string for a class for effects
-        [SerializeField]
-        public List<string> EffectList;
-
         [SerializeField]
         public float HealAmount;
+
+        // TODO:
+        //[SerializeField]
+        //public List<string> EffectList;
     }
 }

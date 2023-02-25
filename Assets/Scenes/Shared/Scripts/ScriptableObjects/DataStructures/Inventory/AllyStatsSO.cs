@@ -8,7 +8,6 @@ namespace Daydream
     public class AllyStatsSO : NPCStatsSO
     {
         [SerializeField]
-        public string WeaponEquipped;
-        //temp class type
+        public EquippableSO WeaponEquipped;
     }
 }

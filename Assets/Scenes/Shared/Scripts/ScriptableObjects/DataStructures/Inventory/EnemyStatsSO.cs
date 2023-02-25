@@ -8,18 +8,18 @@ namespace Daydream
     public class EnemyStatsSO : NPCStatsSO
     {
         [SerializeField]
-        public float XPDrop;
+        public int XPDrop;
         
         [SerializeField]
-        public string LightDrop;
+        public int LightDrop;
 
         [SerializeField]
-        public string InventoryItemDrop;
+        public InventoryItemSO InventoryItemDrop;
 
         [SerializeField]
-        public string WeaponEquipped;
+        public EquippableSO WeaponEquipped;
 
         [SerializeField]
-        public string AccessoryEquipped;
+        public EquippableSO AccessoryEquipped;
     }
 }

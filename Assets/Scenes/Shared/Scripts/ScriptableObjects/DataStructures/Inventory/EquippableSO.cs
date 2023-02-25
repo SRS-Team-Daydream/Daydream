@@ -17,13 +17,6 @@ namespace Daydream
         public StatMods StatMods;
 
         [SerializeField]
-        public float HealthMod;
-
-        [SerializeField]
-        public float DefenseMod;
-
-
-        [SerializeField]
         public List<AbilitySO> AbilityList;
 
         [SerializeField]

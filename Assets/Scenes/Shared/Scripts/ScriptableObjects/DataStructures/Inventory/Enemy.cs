@@ -1,4 +1,3 @@
-using Kulip;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +5,6 @@ using UnityEngine;
 namespace Daydream
 {
     [System.Serializable]
-    class Combat
-    {
-        public List<Enemy> EnemyList;
-    }
-
+    public class Enemy : Character
+    {}
 }

@@ -10,6 +10,6 @@ namespace Daydream
         public string NPCName;
 
         [SerializeField]
-        public List<string> AbilityList;
+        public List<AbilitySO> AbilityList;
     }
 }
