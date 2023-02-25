@@ -6,6 +6,6 @@ using UnityEngine;
 namespace Daydream
 {
     [CreateAssetMenu(fileName = "PartySO", menuName = "Data/Party")]
-    public class PartySO : StaticSO<List<Ally>>
+    public class PartySO : StaticListSO<Ally>
     {}
 }

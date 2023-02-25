@@ -12,16 +12,19 @@ namespace Daydream
     {
         [SerializeField]
         bool canSelect = true;
-        public bool CanSelect => canSelect;
+        public bool CanSelect => canSelect && FirstSelected != null;
 
         [SerializeField]
-        Selectable firstSelected;
+        Selectable defaultFirstSelected;
 
         [SerializeField]
         Menu menu;
 
         [SerializeField]
         InputReaderSO input;
+
+        [System.NonSerialized]
+        public Selectable FirstSelected;
 
         bool selected = false;
         public bool Selected => selected;
@@ -38,6 +41,7 @@ namespace Daydream
         void Awake()
         {
             canvasGroup = GetComponent<CanvasGroup>();
+            FirstSelected = defaultFirstSelected;
         }
 
         public void Show()
@@ -58,7 +62,7 @@ namespace Daydream
         public void Select()
         {
             selected = true;
-            firstSelected.Select();
+            FirstSelected.Select();
 
             input.Menu.CancelEvent += OnMenuCancelButton;
         }
