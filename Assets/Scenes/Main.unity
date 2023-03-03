@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSelect: 1
-  defaultFirstSelected: {fileID: 0}
+  defaultFirstSelected: {fileID: 954657227}
   menu: {fileID: 444925747}
   input: {fileID: 11400000, guid: 95d74a4213b527147a8752beb76c1a5e, type: 2}
 --- !u!114 &121056444
