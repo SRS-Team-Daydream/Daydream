@@ -36,12 +36,12 @@ namespace Daydream
 
         void Start()
         {
-            panel.Hide();
+            if(panel != null) panel.Hide();
         }
 
         public void OnPress()
         {
-            if (panel.CanSelect)
+            if (panel != null && panel.CanSelect)
             {
                 menu.PushPanel(button, panel);
             }
