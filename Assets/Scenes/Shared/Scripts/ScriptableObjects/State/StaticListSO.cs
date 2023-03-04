@@ -8,66 +8,73 @@ namespace Daydream
 {
     public class StaticListSO<T> : StaticSO<List<T>>
     {
-        public System.Action<List<T>> ListChangedEvent;
+        public Event<List<T>> ListChangedEvent;
+
+        private void OnListChanged() {
+            if(ListChangedEvent != null)
+            {
+                ListChangedEvent.Invoke(Value);
+            }
+        }
 
         public void Add(T item)
         {
             Value.Add(item);
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void AddRange(IEnumerable<T> range)
         {
             Value.AddRange(range);
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void Clear()
         {
             Value.Clear();
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void Insert(int index, T item)
         {
             Value.Insert(index, item);
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void Insert(int index, IEnumerable<T> range)
         {
             Value.InsertRange(index, range);
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void Remove(T item)
         {
             Value.Remove(item);
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void RemoveAll(Predicate<T> predicate)
         {
             Value.RemoveAll(predicate);
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void RemoveAt(int idx)
         {
             Value.RemoveAt(idx);
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void RemoveRange(int idx, int count)
         {
             Value.RemoveRange(idx, count);
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
 
         public void Sort()
         {
             Value.Sort();
-            ListChangedEvent?.Invoke(Value);
+            OnListChanged();
         }
     }
 }
