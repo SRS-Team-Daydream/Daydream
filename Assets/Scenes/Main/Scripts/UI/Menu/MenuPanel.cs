@@ -8,7 +8,7 @@ using UnityEngine.Windows;
 namespace Daydream
 {
     [RequireComponent(typeof(CanvasGroup))]
-    public class MenuTabPanel : MonoBehaviour
+    public class MenuPanel : MonoBehaviour
     {
         [SerializeField]
         bool canSelect = true;
@@ -26,9 +26,6 @@ namespace Daydream
         [System.NonSerialized]
         public Selectable FirstSelected;
 
-        bool selected = false;
-        public bool Selected => selected;
-
         CanvasGroup canvasGroup;
         public CanvasGroup CanvasGroup => canvasGroup;
 
@@ -42,6 +39,8 @@ namespace Daydream
         {
             canvasGroup = GetComponent<CanvasGroup>();
             FirstSelected = defaultFirstSelected;
+
+            Hide();
         }
 
         public void Show()
@@ -61,17 +60,7 @@ namespace Daydream
 
         public void Select()
         {
-            selected = true;
             FirstSelected.Select();
-
-            input.Menu.CancelEvent += OnMenuCancelButton;
-        }
-
-        void OnMenuCancelButton()
-        {
-            selected = false;
-
-            input.Menu.CancelEvent -= OnMenuCancelButton;
         }
     }
 }

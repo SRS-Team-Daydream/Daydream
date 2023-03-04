@@ -8,7 +8,7 @@ namespace Daydream
     [RequireComponent(typeof(DynamicGridLayout))]
     public class InventoryMenu : MonoBehaviour
     {
-        [SerializeField] MenuTabPanel tabPanel;
+        [SerializeField] MenuPanel tabPanel;
         [SerializeField] InventorySO inventory;
         [SerializeField] GameObject itemPrefab;
 
@@ -16,7 +16,7 @@ namespace Daydream
 
         void Reset()
         {
-            tabPanel = GetComponentInParent<MenuTabPanel>();
+            tabPanel = GetComponentInParent<MenuPanel>();
             inventory = SOUtil.Find<InventorySO>();
         }
 
