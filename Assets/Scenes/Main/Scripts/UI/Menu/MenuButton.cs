@@ -7,21 +7,16 @@ using UnityEngine.UI;
 namespace Daydream
 {
     [RequireComponent(typeof(Button))]
-    public class MenuTabButton : MonoBehaviour, ISelectHandler, IDeselectHandler
+    public class MenuButton : MonoBehaviour
     {
         [SerializeField]
         Menu menu;
 
         [SerializeField]
-        MenuTabPanel panel;
-
-        [System.NonSerialized]
-        public System.Action<MenuTabButton> SelectEvent;
+        MenuPanel panel;
 
         Button button;
         public Button Button => button;
-
-        bool panelSelected = false;
 
         void Reset()
         {
@@ -44,26 +39,11 @@ namespace Daydream
             panel.Hide();
         }
 
-        public void OnSelect(BaseEventData eventData)
-        {
-            SelectEvent?.Invoke(this);
-            panel.Show();
-        }
-
-        public void OnDeselect(BaseEventData eventData)
-        {
-            if (!panel.Selected)
-            {
-                panel.Hide();
-            }
-        }
-
         public void OnPress()
         {
             if (panel.CanSelect)
             {
-                panel.Select();
-                menu.CancelStack.Push(button);
+                menu.PushPanel(button, panel);
             }
         }
     }

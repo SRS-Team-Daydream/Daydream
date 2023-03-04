@@ -8,8 +8,8 @@ namespace Daydream
 {
     [System.Serializable]
     class MenuTabPanelPair {
-        public MenuTabButton Button;
-        public CanvasGroup Panel;
+        public MenuButton Button;
+        public MenuPanel Panel;
     }
 
     public class Menu : MonoBehaviour
@@ -21,14 +21,9 @@ namespace Daydream
         CanvasGroup canvasGroup;
 
         [SerializeField]
-        Selectable firstSelected;
-
-        [SerializeField]
-        List<MenuTabButton> tabButtons;
-
-        MenuTabButton lastSelectedTab = null;
+        MenuPanel entryPanel;
         
-        public Stack<Selectable> CancelStack = new Stack<Selectable>();
+        public Stack<(Selectable, MenuPanel)> PanelStack = new Stack<(Selectable, MenuPanel)>();
 
 
         void Reset()
@@ -42,26 +37,26 @@ namespace Daydream
             input.Gameplay.MenuEvent += OnMenuButtonPress;
             input.Menu.CancelEvent += OnMenuCancelButtonPress;
             DisableMenu();
-
-            foreach(var tabButton in tabButtons)
-            {
-                tabButton.SelectEvent += OnTabButtonSelect;
-            }
         }
         void OnDestroy()
         {
             input.Gameplay.MenuEvent -= OnMenuButtonPress;
         }
 
+        public void PushPanel(MenuPanel panel)
+            => PushPanel(null, panel);
 
-        public void SelectCurrentTabButton()
+        public void PushPanel(Selectable sender, MenuPanel panel)
         {
-            if(lastSelectedTab != null)
+            if(PanelStack.Count > 0)
             {
-                lastSelectedTab.Button.Select();
+                PanelStack.Peek().Item2.Hide();
             }
-        }
 
+            PanelStack.Push((sender, panel));
+            panel.Show();
+            panel.Select();
+        }
 
         void OnMenuButtonPress()
         {
@@ -71,20 +66,24 @@ namespace Daydream
 
         void OnMenuCancelButtonPress()
         {
-            if(CancelStack.Count == 0)
+            var top = PanelStack.Pop();
+            top.Item2.Hide();
+            if(PanelStack.Count == 0)
             {
                 DisableMenu();
             }
             else
             {
-                var top = CancelStack.Pop();
-                top.Select();
+                PanelStack.Peek().Item2.Show();
+                if (top.Item1 != null)
+                {
+                    top.Item1.Select();
+                }
+                else
+                {
+                    PanelStack.Peek().Item2.Select();
+                }
             }
-        }
-
-        void OnTabButtonSelect(MenuTabButton button)
-        {
-            lastSelectedTab = button;
         }
 
 
@@ -104,7 +103,7 @@ namespace Daydream
             canvasGroup.alpha = 1;
 
             input.EnableMenu();
-            firstSelected.Select();
+            PushPanel(entryPanel);
         }
     }
 }
