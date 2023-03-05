@@ -17,6 +17,9 @@ namespace Daydream
         [SerializeField]
         TMP_Text description;
 
+        [SerializeField]
+        public Selectable FirstSelected;
+
         void Reset()
         {
             TMP_Text[] tmps = GetComponentsInChildren<TMP_Text>();

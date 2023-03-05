@@ -18,7 +18,7 @@ namespace Daydream
         Selectable defaultFirstSelected;
 
         [SerializeField]
-        Menu menu;
+        public Menu Menu;
 
         [SerializeField]
         InputReaderSO input;
@@ -32,7 +32,7 @@ namespace Daydream
         void Reset()
         {
             input = InputReaderSO.FindInputReaderSO();
-            menu = GetComponentInParent<Menu>();
+            Menu = GetComponentInParent<Menu>();
         }
 
         void Awake()
