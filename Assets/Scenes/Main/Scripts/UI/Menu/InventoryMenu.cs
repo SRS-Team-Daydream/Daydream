@@ -8,16 +8,18 @@ namespace Daydream
     [RequireComponent(typeof(DynamicGridLayout))]
     public class InventoryMenu : MonoBehaviour
     {
-        [SerializeField] MenuPanel tabPanel;
+        [SerializeField] MenuPanel panel;
         [SerializeField] InventorySO inventory;
         [SerializeField] GameObject itemPrefab;
+        [SerializeField] InventoryItemInfoPanel infoPanel;
 
         DynamicGridLayout grid;
 
         void Reset()
         {
-            tabPanel = GetComponentInParent<MenuPanel>();
+            panel = GetComponentInParent<MenuPanel>();
             inventory = SOUtil.Find<InventorySO>();
+            infoPanel = transform.parent.GetComponentInChildren<InventoryItemInfoPanel>();
         }
 
         void Awake()
@@ -37,6 +39,13 @@ namespace Daydream
             inventory.ListChangedEvent -= DrawInventory;
 
         }
+
+
+        public void SelectItem(InventoryItemSO item)
+        {
+            infoPanel.SetInventoryItem(item);
+        }
+
 
         void DrawInventory(List<InventoryItemSO> items)
         {
@@ -59,15 +68,16 @@ namespace Daydream
 
                 var itemUI = item.GetComponent<InventoryItemUI>();
                 itemUI.InventoryItem = itemSO;
+                itemUI.InventoryMenu = this;
             }
 
             // wait for end of frame for transform to update
             yield return null;
 
-            tabPanel.FirstSelected = null;
+            panel.FirstSelected = null;
             if (transform.childCount > 0)
             {
-                tabPanel.FirstSelected = transform.GetChild(0).gameObject.GetComponent<Button>();
+                panel.FirstSelected = transform.GetChild(0).gameObject.GetComponent<Button>();
             }
             
             // set navigation for all buttons (needs to be manual)
