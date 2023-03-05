@@ -15,3 +15,8 @@ MonoBehaviour:
   _keepAlive: 1
   _defaultValue:
   - {fileID: 11400000, guid: 329b44f6f6e270b4d80ca44c7785636d, type: 2}
+  - {fileID: 11400000, guid: eaaaceb6ca4ac6a4b8c60926d8b91a70, type: 2}
+  ValueChangedEvent:
+    _eventSO: {fileID: 0}
+  ListChangedEvent:
+    _eventSO: {fileID: 0}

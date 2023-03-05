@@ -46,6 +46,15 @@ namespace Daydream
             infoPanel.SetInventoryItem(item);
         }
 
+        public void SubmitItem(Selectable sender)
+        {
+            panel.Menu.PushSelectable(sender);
+            if(infoPanel.FirstSelected != null)
+            {
+                infoPanel.FirstSelected.Select();
+            }
+        }
+
 
         void DrawInventory(List<InventoryItemSO> items)
         {
@@ -79,9 +88,9 @@ namespace Daydream
             {
                 panel.FirstSelected = transform.GetChild(0).gameObject.GetComponent<Button>();
             }
-            
+
             // set navigation for all buttons (needs to be manual)
-            foreach(Transform child in transform)
+            foreach (Transform child in transform)
             {
                 Button button = child.gameObject.GetComponent<Button>();
                 Vector2Int coord = grid.GetChildGridCoordinate(child);
@@ -94,7 +103,6 @@ namespace Daydream
                     selectOnUp = gridSiblings.Up == null ? null : gridSiblings.Up.gameObject.GetComponent<Button>(),
                     selectOnDown = gridSiblings.Down == null ? null : gridSiblings.Down.gameObject.GetComponent<Button>(),
                 };
-
             }
         }
     }

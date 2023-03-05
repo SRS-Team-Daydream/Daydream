@@ -91,18 +91,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 7796998037283626086}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.71132076, b: 0.71132076, a: 1}
+    m_PressedColor: {r: 1, g: 0.30566037, b: 0.30566037, a: 1}
+    m_SelectedColor: {r: 1, g: 0.70980394, b: 0.70980394, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 1
   defaultFirstSelected: {fileID: 0}
-  menu: {fileID: 3867636237259128371}
+  Menu: {fileID: 3867636237259128371}
   input: {fileID: 11400000, guid: 95d74a4213b527147a8752beb76c1a5e, type: 2}
 --- !u!1 &3867636237414459675
 GameObject:
@@ -1805,7 +1805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 1
   defaultFirstSelected: {fileID: 3867636237144309842}
-  menu: {fileID: 3867636237259128371}
+  Menu: {fileID: 0}
   input: {fileID: 11400000, guid: 95d74a4213b527147a8752beb76c1a5e, type: 2}
 --- !u!114 &3867636237488625085
 MonoBehaviour:
@@ -1926,7 +1926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 3867636238216495175}
     m_SelectOnDown: {fileID: 3867636237732064276}
@@ -2767,7 +2767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 3867636237552190459}
     m_SelectOnDown: {fileID: 3867636238567463465}
@@ -2961,7 +2961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 3867636237130164254}
     m_SelectOnDown: {fileID: 3867636238216495175}
@@ -3425,7 +3425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 3867636237772358236}
     m_SelectOnDown: {fileID: 3867636237552190459}
@@ -3950,7 +3950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 3867636237732064276}
     m_SelectOnDown: {fileID: 0}
@@ -4733,7 +4733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSelect: 1
   defaultFirstSelected: {fileID: 3867636237130164254}
-  menu: {fileID: 3867636237259128371}
+  Menu: {fileID: 0}
   input: {fileID: 11400000, guid: 95d74a4213b527147a8752beb76c1a5e, type: 2}
 --- !u!1 &3867636239046111260
 GameObject:
@@ -5010,6 +5010,7 @@ MonoBehaviour:
   name: {fileID: 7228442467828725620}
   image: {fileID: 1872059895891173612}
   description: {fileID: 7233260442934988402}
+  FirstSelected: {fileID: 7796998037283626086}
 --- !u!1 &4468146051098918701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,18 +5102,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 696927836739830679}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.71132076, b: 0.71132076, a: 1}
+    m_PressedColor: {r: 1, g: 0.30566037, b: 0.30566037, a: 1}
+    m_SelectedColor: {r: 1, g: 0.70980394, b: 0.70980394, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5431,7 +5432,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 16.4
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1

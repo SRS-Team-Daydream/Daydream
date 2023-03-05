@@ -29,7 +29,7 @@ namespace Daydream
 
         public Transform GetChild(int x, int y)
             => y * _columns + x < transform.childCount 
-            && x > 0 && y > 0 && x < _columns
+            && x >= 0 && y >= 0 && x < _columns
                 ? transform.GetChild(y * _columns + x) 
                 : null;
 

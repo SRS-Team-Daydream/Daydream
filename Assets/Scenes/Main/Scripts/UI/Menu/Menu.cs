@@ -6,9 +6,15 @@ using UnityEngine.UI;
 
 namespace Daydream
 {
-    [System.Serializable]
-    class MenuTabPanelPair {
-        public MenuButton Button;
+    public class CancelContext
+    {
+        public CancelContext(Selectable sender, MenuPanel panel)
+        {
+            Sender = sender;
+            Panel = panel;
+        }
+
+        public Selectable Sender;
         public MenuPanel Panel;
     }
 
@@ -23,8 +29,13 @@ namespace Daydream
         [SerializeField]
         MenuPanel entryPanel;
         
-        public Stack<(Selectable, MenuPanel)> PanelStack = new Stack<(Selectable, MenuPanel)>();
-
+        // sort of like a graph between panels and selectable (but they're grouped into pairs)
+        // whenever a button (sender) links to another panel, we add the pair to the cancel stack
+        // this makes it so when we press cancel, we pop the panel and selectable, hide the panel, select the selectable, and show whatever panel is on top of the stack
+        // (if no panels are left, that means we pressed cancel on the entry menu, so we leave the menu)
+        // but this also works when we go to a different region within a panel. we just only push the selectable
+        // it also works if there is no selectable
+        public Stack<CancelContext> CancelStack = new Stack<CancelContext>();
 
         void Reset()
         {
@@ -48,14 +59,19 @@ namespace Daydream
 
         public void PushPanel(Selectable sender, MenuPanel panel)
         {
-            if(PanelStack.Count > 0)
+            if (CancelStack.TryPeek(out var cancelContext) && cancelContext.Panel != null)
             {
-                PanelStack.Peek().Item2.Hide();
+                cancelContext.Panel.Hide();
             }
 
-            PanelStack.Push((sender, panel));
+            CancelStack.Push(new CancelContext(sender, panel));
             panel.Show();
             panel.Select();
+        }
+        
+        public void PushSelectable(Selectable sender)
+        {
+            CancelStack.Push(new CancelContext(sender, null));
         }
 
         void OnMenuButtonPress()
@@ -66,23 +82,28 @@ namespace Daydream
 
         void OnMenuCancelButtonPress()
         {
-            var top = PanelStack.Pop();
-            top.Item2.Hide();
-            if(PanelStack.Count == 0)
+            var cancelContext = CancelStack.Pop();
+            if (cancelContext.Panel != null)
             {
-                DisableMenu();
+                cancelContext.Panel.Hide();
             }
-            else
+
+            if(CancelStack.TryPeek(out var newCancelContext))
             {
-                PanelStack.Peek().Item2.Show();
-                if (top.Item1 != null)
+                newCancelContext.Panel.Show();
+                if (cancelContext.Sender != null)
                 {
-                    top.Item1.Select();
+                    cancelContext.Sender.Select();
                 }
                 else
                 {
-                    PanelStack.Peek().Item2.Select();
+                    newCancelContext.Panel.Select();
                 }
+            }
+            // if no more cancel contexts, disable menu
+            else
+            {
+                DisableMenu();
             }
         }
 
