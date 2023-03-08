@@ -1,11 +1,118 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Kulip
+namespace Daydream
 {
+    [System.Serializable]
+    public class Event
+    {
+        System.Action _event;
+        [SerializeField] EventSO _eventSO;
+
+        public static Event operator +(Event a, System.Action f)
+        {
+            if (a._eventSO != null)
+            {
+                a._eventSO += f;
+            }
+            else
+            {
+                a._eventSO += f;
+            }
+            return a;
+        }
+
+        public static Event operator -(Event a, System.Action f)
+        {
+            if (a._eventSO != null)
+            {
+                a._eventSO -= f;
+            }
+            else
+            {
+                a._eventSO -= f;
+            }
+            return a;
+        }
+
+        public void Invoke()
+        {
+            if (_eventSO != null)
+            {
+                _eventSO.Invoke();
+            }
+            else
+            {
+                _event?.Invoke();
+            }
+        }
+
+        public void Clear()
+        {
+            _event = null;
+            if (_eventSO != null)
+            {
+                _eventSO.Clear();
+            }
+        }
+    }
+
+    [System.Serializable]
+    public class Event<T>
+    {
+        System.Action<T> _event;
+        [SerializeField] EventSO<T> _eventSO;
+
+        public static Event<T> operator +(Event<T> a, System.Action<T> f)
+        {
+            if(a._eventSO != null)
+            {
+                a._eventSO += f;
+            }
+            else
+            {
+                a._event += f;
+            }
+            return a;
+        }
+
+        public static Event<T> operator -(Event<T> a, System.Action<T> f)
+        {
+            if (a._eventSO != null)
+            {
+                a._eventSO -= f;
+            }
+            else
+            {
+                a._event -= f;
+            }
+            return a;
+        }
+
+        public void Invoke(T arg)
+        {
+            if (_eventSO != null)
+            {
+                _eventSO.Invoke(arg);
+            }
+            else
+            {
+                _event?.Invoke(arg);
+            }
+        }
+
+        public void Clear()
+        {
+            _event = null;
+            if(_eventSO != null)
+            {
+                _eventSO.Clear();
+            }
+        }
+    }
+
     [CreateAssetMenu(fileName = "Event", menuName = "Events/()")]
     public class EventSO : ScriptableObject
     {

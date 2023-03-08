@@ -6,6 +6,6 @@ using UnityEngine;
 namespace Daydream
 {
     [CreateAssetMenu(fileName = "Inventory", menuName = "Data/Inventory")]
-    public class InventorySO : StaticSO<List<InventoryItemSO>>
+    public class InventorySO : StaticListSO<InventoryItemSO>
     {}
 }
