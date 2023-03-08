@@ -71,19 +71,7 @@ namespace Daydream
         [System.NonSerialized] public Controls Controls;
 
         public static InputReaderSO FindInputReaderSO()
-        {
-            if (Application.isPlaying)
-            {
-                Debug.LogError("FindInputReaderSO should only be used in the editor (eg. in Reset)");
-            }
-            string[] guids = AssetDatabase.FindAssets("t:InputReaderSO");
-            foreach(var guid in guids){
-                string assetPath = AssetDatabase.GUIDToAssetPath(guid);
-                InputReaderSO asset = AssetDatabase.LoadAssetAtPath<InputReaderSO>(assetPath);
-                if (asset != null) return asset;
-            }
-            return null;
-        }
+            => SOUtil.Find<InputReaderSO>();
 
         public void OnEnable()
         {
