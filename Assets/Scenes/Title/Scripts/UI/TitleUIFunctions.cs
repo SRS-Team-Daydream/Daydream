@@ -9,7 +9,7 @@ namespace Daydream
     {
         [SerializeField] string mainScene = "main";
         
-        public void Start()
+        public void StartGame()
         {
             SceneManager.LoadScene(mainScene);
         }
