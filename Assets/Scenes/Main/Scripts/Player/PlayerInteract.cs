@@ -7,34 +7,27 @@ namespace Daydream
 {
     public class PlayerInteract : MonoBehaviour
     {
-        [System.NonSerialized]
-        public PlayerInput PlayerInput;
-        [System.NonSerialized]
-        public Controls Controls;
+        [SerializeField] InputReaderSO inputReader;
 
         bool _interact = false;
-        [SerializeField] float _interactdist = 10f;
+        [SerializeField] float _interactdist = 1f;
 
         [SerializeField]
         LayerMask mask;
 
-        
-
-        private void Awake()
+        void Reset()
         {
-            PlayerInput = GetComponent<PlayerInput>();
-            Controls = new Controls();
-            PlayerInput.actions = Controls.asset;
+            inputReader = SOUtil.Find<InputReaderSO>();
         }
 
-        void Start()
+        void Awake()
         {
-            Controls.Gameplay.Action.started += OnInteract;
+            inputReader.Gameplay.ActionEvent += OnInteract;
         }
 
         private void OnDestroy()
         {
-            Controls.Gameplay.Action.started -= OnInteract;
+            inputReader.Gameplay.ActionEvent -= OnInteract;
         }
         public void Interact()
         {
@@ -50,7 +43,7 @@ namespace Daydream
             }
         }
 
-        void OnInteract(InputAction.CallbackContext ctx)
+        void OnInteract()
         {
             Interact();
         }
