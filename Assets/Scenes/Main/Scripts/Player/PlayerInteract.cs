@@ -10,10 +10,9 @@ namespace Daydream
     {
         [SerializeField] InputReaderSO inputSO;
 
-        [SerializeField] float _interactdist = 10f;
+        [SerializeField] float _interactdist = 1f;
 
-        [SerializeField]
-        LayerMask mask;
+        [SerializeField] LayerMask mask;
 
         Vector2 _moveDir = Vector2.zero;
 
@@ -26,26 +25,35 @@ namespace Daydream
         private void Awake()
         {
             inputSO.Gameplay.ActionEvent += OnInteract;
+            inputSO.Gameplay.MoveChangedEvent += OnMoveChanged;
+        }
+
+        void OnDestroy()
+        {
+            inputSO.Gameplay.ActionEvent -= OnInteract;
+            inputSO.Gameplay.MoveChangedEvent -= OnMoveChanged;
         }
 
         public void Interact()
         {
-            RaycastHit2D _hit;
-
-            _hit = Physics2D.Raycast(transform.position, transform.right, _interactdist, mask);
-
-            if (_hit.collider != null)
+            Collider2D collider = Physics2D.OverlapPoint((Vector2)transform.position + _moveDir * _interactdist, mask);
+            if (collider != null)
             {
-                
+                collider.gameObject.GetComponent<Interactable>().Interact();
             }
         }
 
         void OnInteract()
         {
             Interact();
-
         }
 
-
+        void OnMoveChanged(Vector2 move)
+        {
+            if(move.sqrMagnitude > 0)
+            {
+                _moveDir = move;
+            }
+        }
     }
 }
