@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace Daydream
 {
-    public class Player : MonoBehaviour
+    public class PlayerInteract : MonoBehaviour
     {
         [System.NonSerialized]
         public PlayerInput PlayerInput;
