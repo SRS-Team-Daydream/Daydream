@@ -2,50 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 namespace Daydream
 {
     public class PlayerInteract : MonoBehaviour
     {
-        [SerializeField] InputReaderSO inputReader;
+        [SerializeField] InputReaderSO inputSO;
 
-        bool _interact = false;
-        [SerializeField] float _interactdist = 1f;
+        [SerializeField] float _interactdist = 10f;
 
         [SerializeField]
         LayerMask mask;
 
+        Vector2 _moveDir = Vector2.zero;
+
+
         void Reset()
         {
-            inputReader = SOUtil.Find<InputReaderSO>();
+            inputSO = SOUtil.Find<InputReaderSO>();
         }
 
-        void Awake()
+        private void Awake()
         {
-            inputReader.Gameplay.ActionEvent += OnInteract;
+            inputSO.Gameplay.ActionEvent += OnInteract;
         }
 
-        private void OnDestroy()
-        {
-            inputReader.Gameplay.ActionEvent -= OnInteract;
-        }
         public void Interact()
         {
-            int _layermask = 1 << 7;
-
             RaycastHit2D _hit;
 
-            _hit = Physics2D.Raycast(transform.position, transform.right, _interactdist, _layermask);
+            _hit = Physics2D.Raycast(transform.position, transform.right, _interactdist, mask);
 
             if (_hit.collider != null)
             {
-                Debug.DrawRay(transform.position, transform.right * _hit.distance, Color.yellow);
+                
             }
         }
 
         void OnInteract()
         {
             Interact();
+
         }
 
 
