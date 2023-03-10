@@ -16,6 +16,8 @@ namespace Daydream
 
         private Vector2 movementVar;
 
+        [SerializeField] Animator animator;
+
 
         void Awake()
         {
@@ -32,6 +34,14 @@ namespace Daydream
         {
             // Apply movement
             body.MovePosition(body.position + movementVar * speed * Time.fixedDeltaTime);
+
+            Animate();
+
+        }
+
+        void Animate()
+        {
+
         }
     }
 }
