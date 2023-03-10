@@ -23,6 +23,8 @@ namespace Daydream
         {
             body = GetComponent<Rigidbody2D>();
             inputReader.Gameplay.MoveChangedEvent += OnMoveChanged;
+
+            animator = GetComponent<Animator>();
         }
 
         void OnMoveChanged(Vector2 newMovement)
@@ -37,11 +39,26 @@ namespace Daydream
 
             Animate();
 
+            
+
         }
 
         void Animate()
         {
+            if(movementVar.y > 0)
+            {
+                animator.SetInteger("transitionVar", 1);
+            }
 
+            else if (movementVar.y < 0)
+            {
+                animator.SetInteger("transitionVar", -1);
+            }
+
+            else if (movementVar.y == 0)
+            {
+                animator.SetInteger("transitionVar", 0);
+            }
         }
     }
 }
