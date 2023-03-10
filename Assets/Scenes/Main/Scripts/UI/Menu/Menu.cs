@@ -82,6 +82,7 @@ namespace Daydream
 
         void OnMenuCancelButtonPress()
         {
+            if (CancelStack.Count == 0) return;
             var cancelContext = CancelStack.Pop();
             if (cancelContext.Panel != null)
             {

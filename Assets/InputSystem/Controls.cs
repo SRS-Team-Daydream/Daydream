@@ -40,12 +40,12 @@ namespace Daydream
                 },
                 {
                     ""name"": ""Action"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""d81c9a7f-b963-44f7-a448-fc09efdba912"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Cancel"",

@@ -8,18 +8,13 @@ namespace Daydream
 {
     public class YarnspinnerInteractable : Interactable
     {
-        [SerializeField] DialogueRunner dialogueRunner;
+        [SerializeField] EventSO<string> dialogueStartEvent;
         [SerializeField] string node;
-
-        void Reset()
-        {
-            dialogueRunner = FindObjectOfType<DialogueRunner>();
-        }
 
         public override void Interact()
         {
             base.Interact();
-            dialogueRunner.StartDialogue(node);
+            dialogueStartEvent.Invoke(node);
         }
     }
 }

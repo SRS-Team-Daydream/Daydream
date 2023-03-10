@@ -24,13 +24,13 @@ namespace Daydream
 
         private void Awake()
         {
-            inputSO.Gameplay.ActionEvent += OnInteract;
+            inputSO.Gameplay.ActionEvent += Interact;
             inputSO.Gameplay.MoveChangedEvent += OnMoveChanged;
         }
 
         void OnDestroy()
         {
-            inputSO.Gameplay.ActionEvent -= OnInteract;
+            inputSO.Gameplay.ActionEvent -= Interact;
             inputSO.Gameplay.MoveChangedEvent -= OnMoveChanged;
         }
 
@@ -41,11 +41,6 @@ namespace Daydream
             {
                 collider.gameObject.GetComponent<Interactable>().Interact();
             }
-        }
-
-        void OnInteract()
-        {
-            Interact();
         }
 
         void OnMoveChanged(Vector2 move)
