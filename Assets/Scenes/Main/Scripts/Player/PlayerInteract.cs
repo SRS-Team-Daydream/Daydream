@@ -11,6 +11,7 @@ namespace Daydream
         [SerializeField] InputReaderSO inputSO;
 
         [SerializeField] float _interactdist = 1f;
+        [SerializeField] Vector2 _offset = Vector2.one / 2;
 
         [SerializeField] LayerMask mask;
 
@@ -24,6 +25,12 @@ namespace Daydream
 
         private void Awake()
         {
+#if UNITY_EDITOR
+            if(mask.value == 0)
+            {
+                Debug.LogWarning("PlayerInteract does not have a mask set. Interactions will not work.");
+            }
+#endif
             inputSO.Gameplay.ActionEvent += Interact;
             inputSO.Gameplay.MoveChangedEvent += OnMoveChanged;
         }
@@ -36,7 +43,8 @@ namespace Daydream
 
         public void Interact()
         {
-            Collider2D collider = Physics2D.OverlapPoint((Vector2)transform.position + _moveDir * _interactdist, mask);
+            Collider2D collider = Physics2D.OverlapPoint((Vector2)transform.position + _offset + _moveDir * _interactdist, mask);
+            Debug.Log((Vector2)transform.position + _offset + _moveDir * _interactdist);
             if (collider != null)
             {
                 collider.gameObject.GetComponent<Interactable>().Interact();
