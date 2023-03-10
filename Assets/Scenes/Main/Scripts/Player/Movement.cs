@@ -32,15 +32,12 @@ namespace Daydream
             movementVar = newMovement;
         }
 
-        void FixedUpdate()
+        void Update()
         {
             // Apply movement
-            body.MovePosition(body.position + movementVar * speed * Time.fixedDeltaTime);
+            transform.position += (Vector3) movementVar * speed * Time.deltaTime;
 
             Animate();
-
-            
-
         }
 
         void Animate()

@@ -482,9 +482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 1
   m_FollowOffset: {x: 0, y: 0, z: -10}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -799,8 +799,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed9801781992da4b82d6eabbcf87234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputSO: {fileID: 0}
-  _interactdist: 10
+  inputSO: {fileID: 11400000, guid: 95d74a4213b527147a8752beb76c1a5e, type: 2}
+  _interactdist: 1
   mask:
     serializedVersion: 2
     m_Bits: 0
