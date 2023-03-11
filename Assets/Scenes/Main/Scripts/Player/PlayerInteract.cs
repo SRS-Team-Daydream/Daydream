@@ -44,7 +44,6 @@ namespace Daydream
         public void Interact()
         {
             Collider2D collider = Physics2D.OverlapPoint((Vector2)transform.position + _offset + _moveDir * _interactdist, mask);
-            Debug.Log((Vector2)transform.position + _offset + _moveDir * _interactdist);
             if (collider != null)
             {
                 collider.gameObject.GetComponent<Interactable>().Interact();

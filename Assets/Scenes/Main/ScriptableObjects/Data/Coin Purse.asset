@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 309df53139a3c7448b2eb42ff6be7c4c, type: 3}
-  m_Name: MatchBook
+  m_Name: Coin Purse
   m_EditorClassIdentifier: 
-  Name: Match Book
-  Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  Description: "A 20-strike matchbook. \nHas a funeral home on the back cover, \"Funeraria
-    Mundo Venidero\""
+  Name: Coin Purse
+  Sprite: {fileID: 21300000, guid: fe3b045716a432243b6a757752b392e8, type: 3}
+  Description: 
