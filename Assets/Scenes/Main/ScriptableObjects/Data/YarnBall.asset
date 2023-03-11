@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ball of String
   Sprite: {fileID: 21300000, guid: 2c92653566993404f8a72a96574736eb, type: 3}
-  Description: scratchy to the touch, this colorful ball of string seems never ending.
-    you could keep pulling and pulling and it would stay the same. the loose end
-    is charred at the tip. this string has been used before.
+  Description: Scratchy to the touch, this colorful ball of string seems never ending.
+    You could keep pulling and pulling and it would stay the same. The loose end
+    is charred at the tip. This string has been used before.
