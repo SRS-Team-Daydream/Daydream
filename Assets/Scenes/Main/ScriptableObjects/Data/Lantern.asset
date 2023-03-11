@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Lantern
   Sprite: {fileID: 21300000, guid: 8f929c5cace62714d96dc15b7555981a, type: 3}
-  Description: 
+  Description: oil fueled and old fashioned, the dents and scuffs on its metal frame
+    and cracks in the glass hint at a life before ending up in this cave. running
+    your fingers over its chassis you can feel sea breeze and hymns. it will never
+    need to be refueled.

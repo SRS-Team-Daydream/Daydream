@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 309df53139a3c7448b2eb42ff6be7c4c, type: 3}
-  m_Name: YarnBall
+  m_Name: Matches
   m_EditorClassIdentifier: 
-  Name: Ball of String
-  Sprite: {fileID: 21300000, guid: 2c92653566993404f8a72a96574736eb, type: 3}
-  Description: scratchy to the touch, this colorful ball of string seems never ending.
-    you could keep pulling and pulling and it would stay the same. the loose end
-    is charred at the tip. this string has been used before.
+  Name: Matches
+  Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  Description: '"You ''SCHUD'' plan for death!" SCHUDSON FUNERAL HOMES, since 1913.
+    Rochester, NY.'
