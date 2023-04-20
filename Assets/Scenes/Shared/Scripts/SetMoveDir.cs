@@ -8,7 +8,6 @@ namespace Daydream
     public class SetMoveDir : MonoBehaviour
     {
 
-        Vector2Int newPos = Vector2Int.zero;
         Vector2Int oldPos = Vector2Int.zero;
         Vector2Int targetPos = Vector2Int.zero;
         Vector2 _direction = Vector2.zero;
@@ -21,6 +20,8 @@ namespace Daydream
 
         public void Move(Vector2 inputMove)
         {
+
+            
             //only set new targetPos is previous target has been reached
             if (oldPos == targetPos)
             {
@@ -29,18 +30,24 @@ namespace Daydream
                 Mathf.FloorToInt(inputMove.y));
             }
 
-            _direction = (targetPos - oldPos);
+            if (Mathf.Abs(targetPos.x) < gridDimensions.x && Mathf.Abs(targetPos.y) < gridDimensions.y)
+            {
+                _direction = (targetPos - oldPos);
 
-            //Debug.Log(newPos.x + ", " + newPos.y);
-            //Debug.Log(targetPos.x + ", " + targetPos.y);
-            //Debug.Log(moveDir.x + ", " + moveDir.y);
+                //Debug.Log(newPos.x + ", " + newPos.y);
+                //Debug.Log(targetPos.x + ", " + targetPos.y);
+                //Debug.Log(moveDir.x + ", " + moveDir.y);
 
-            transform.position += new Vector3(_direction.x, _direction.y, 0).normalized * _speed * Time.deltaTime;
+                transform.position += new Vector3(_direction.x, _direction.y, 0).normalized * _speed * Time.deltaTime;
 
-            //convert transform to grid coordinates
-            oldPos = new Vector2Int
-                (Mathf.FloorToInt(transform.position.x - origin.transform.position.x),
-                Mathf.FloorToInt(transform.position.y - origin.transform.position.y));
+                //convert transform to grid coordinates
+                oldPos = new Vector2Int
+                    (Mathf.FloorToInt(transform.position.x - origin.transform.position.x),
+                    Mathf.FloorToInt(transform.position.y - origin.transform.position.y));
+            }
+
+            else { targetPos = oldPos; }
+            
 
         }
     }
