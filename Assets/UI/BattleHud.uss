@@ -3,3 +3,17 @@
     -unity-font-style: bold;
     color: rgb(68, 138, 255);
 }
+
+.bg_block {
+    flex-grow: initial;
+    background-color: rgb(255, 185, 0);
+    height: 121px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    bottom: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 1205px;
+}
