@@ -11,7 +11,7 @@ namespace Daydream
         public System.Action ActionEvent;
         public System.Action CancelEvent;
         public System.Action MenuEvent;
-        public System.Action<Vector2> MoveChangedEvent;
+        public System.Action<Vector2Int> MoveChangedEvent;
         public System.Action<bool> SprintChangedEvent;
 
         Vector2 lastMove = Vector2.zero;

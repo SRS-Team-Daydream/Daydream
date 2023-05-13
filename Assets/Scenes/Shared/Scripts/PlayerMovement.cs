@@ -23,13 +23,13 @@ namespace Daydream
 
         void Awake()
         {
-            inputSO.Gameplay.MoveChangedEvent += OnInputMove;
+            inputSO.Gameplay.MoveChangedEvent += OnMoveChange;
             gridMovement = GetComponent<GridMovement>();
         }
 
-        void OnInputMove(Vector2 input)
+        void OnMoveChange(Vector2Int input)
         {
-            gridMovement.Move(input);
+            gridMovement.SetMoveDirection(input);
         }
     }
 }

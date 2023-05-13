@@ -10,9 +10,13 @@ namespace Daydream
         [SerializeField] float interval = 0.2f;
         [SerializeField] Grid grid;
 
-        Vector2Int lastPos;
-        Vector2Int targetPos;
-        float moveTime;
+        public Grid Grid => grid;
+        public System.Action LandedOnTileEvent;
+
+        Vector2Int moveDirection = Vector2Int.zero;
+        Vector2Int lastPos = Vector2Int.zero;
+        Vector2Int targetPos = Vector2Int.zero;
+        float moveTime = float.NegativeInfinity;
 
         void Reset()
         {
@@ -22,8 +26,10 @@ namespace Daydream
         void Start()
         {
             lastPos = (Vector2Int)grid.WorldToCell(transform.position);
+            transform.position = grid.CellToWorld((Vector3Int)lastPos);
         }
 
+        // Moves ONE tile
         public void Move(Vector2Int input)
         {
             //only set new targetPos is previous target has been reached
@@ -31,8 +37,14 @@ namespace Daydream
             {
                 targetPos = lastPos + Vector2Int.FloorToInt(input);
                 moveTime = Time.time;
-                Debug.Log(moveTime);
             }
+        }
+
+        // Moves tiles until direction changes
+        public void SetMoveDirection(Vector2Int direction)
+        {
+            moveDirection = direction;
+            Move(direction);
         }
 
         void Update()
@@ -42,7 +54,7 @@ namespace Daydream
                 transform.position = (Vector3)Vector2.Lerp(
                     grid.CellToWorld((Vector3Int)lastPos),
                     grid.CellToWorld((Vector3Int)targetPos),
-                    (Time.time - moveTime)/moveTime
+                    (Time.time - moveTime)/interval
                 ) + Vector3.up * transform.position.z;
             }
             else if(targetPos != lastPos)
@@ -50,6 +62,13 @@ namespace Daydream
                 transform.position = (Vector3)(Vector2)grid.CellToWorld((Vector3Int)targetPos)
                     + Vector3.up * transform.position.z;
                 lastPos = targetPos;
+
+                LandedOnTileEvent?.Invoke();
+
+                if (moveDirection.sqrMagnitude > 0)
+                {
+                    Move(moveDirection);
+                }
             }
         }
     }
