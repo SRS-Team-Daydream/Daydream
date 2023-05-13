@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Editor/BattleHud.uss?fileID=7433441132597879392&amp;guid=b1a1aa6c2280d1f418b67b5f00d7a4fb&amp;type=3#BattleHud" />
+    <Style src="project://database/Assets/UI/BattleHud.uss?fileID=7433441132597879392&amp;guid=b1a1aa6c2280d1f418b67b5f00d7a4fb&amp;type=3#BattleHud" />
     <ui:VisualElement name="AbacusTab" style="flex-grow: 1; background-color: rgb(216, 176, 117); height: 477px; width: 235px; flex-direction: row-reverse; align-items: auto; justify-content: flex-end; align-self: flex-end; -unity-background-image-tint-color: rgb(195, 181, 181); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
         <ui:VisualElement name="Abacus" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; height: 472px; width: 90px;">
             <ui:VisualElement name="Places" style="flex-grow: initial; background-color: rgba(0, 0, 0, 0); height: 130px; flex-direction: row;">
@@ -27,7 +27,7 @@
                         <ui:VisualElement style="flex-grow: 1; background-color: rgb(224, 216, 216); border-left-color: rgba(127, 127, 127, 0); border-right-color: rgba(127, 127, 127, 0); border-top-color: rgba(127, 127, 127, 0); border-bottom-color: rgba(127, 127, 127, 0);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Info" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                        <ui:Label tabindex="-1" text="Charcter Name" display-tooltip-when-elided="true" name="name" style="font-size: 30px; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&apos;); -unity-font-style: normal; -unity-text-outline-width: 0;" />
+                        <ui:Label tabindex="-1" text="Character Name" display-tooltip-when-elided="true" name="name" style="font-size: 30px; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&apos;); -unity-font-style: normal; -unity-text-outline-width: 0;" />
                         <ui:ProgressBar value="22" title="HP" name="Hp" style="-unity-background-image-tint-color: rgb(147, 80, 80); background-color: rgb(3, 3, 3);" />
                         <ui:Label tabindex="-1" text="insert other charcter relevant stuff here" display-tooltip-when-elided="true" />
                     </ui:VisualElement>
@@ -37,7 +37,7 @@
                         <ui:VisualElement style="flex-grow: 1; background-color: rgb(224, 216, 216); border-left-color: rgba(127, 127, 127, 0); border-right-color: rgba(127, 127, 127, 0); border-top-color: rgba(127, 127, 127, 0); border-bottom-color: rgba(127, 127, 127, 0);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Info" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                        <ui:Label tabindex="-1" text="Charcter Name" display-tooltip-when-elided="true" name="name" style="font-size: 20px; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&apos;); -unity-font-style: normal; -unity-text-outline-width: 0;" />
+                        <ui:Label tabindex="-1" text="Character Name" display-tooltip-when-elided="true" name="name" style="font-size: 20px; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&apos;); -unity-font-style: normal; -unity-text-outline-width: 0;" />
                         <ui:ProgressBar value="22" title="HP" name="Hp" style="-unity-background-image-tint-color: rgb(147, 80, 80); background-color: rgb(3, 3, 3);" />
                         <ui:Label tabindex="-1" text="insert other charcter relevant stuff here" display-tooltip-when-elided="true" />
                     </ui:VisualElement>
