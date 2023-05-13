@@ -14,7 +14,7 @@ namespace Daydream
 
         private Rigidbody2D body;
 
-        private Vector2 movementVar;
+        private Vector2Int movementVar;
 
 
         void Awake()
@@ -23,7 +23,7 @@ namespace Daydream
             inputReader.Gameplay.MoveChangedEvent += OnMoveChanged;
         }
 
-        void OnMoveChanged(Vector2 newMovement)
+        void OnMoveChanged(Vector2Int newMovement)
         {
             movementVar = newMovement;
         }
@@ -31,7 +31,7 @@ namespace Daydream
         void FixedUpdate()
         {
             // Apply movement
-            body.MovePosition(body.position + movementVar * speed * Time.fixedDeltaTime);
+            body.MovePosition(body.position + (Vector2)movementVar * speed * Time.fixedDeltaTime);
         }
     }
 }
