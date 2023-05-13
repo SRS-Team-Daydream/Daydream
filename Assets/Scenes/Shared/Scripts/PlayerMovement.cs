@@ -8,36 +8,28 @@ using UnityEngine.InputSystem;
 
 namespace Daydream
 {
+    [RequireComponent(typeof(GridMovement))]
     public class PlayerMovement : MonoBehaviour
     {
 
         [SerializeField] InputReaderSO inputSO;
 
-        public Vector2 _inputVec = Vector2.zero;
-        [SerializeField]float _speed = 5f;
+        GridMovement gridMovement;
 
-        [SerializeField] SetMoveDir setMoveDir;
-        
-
+        void Reset()
+        {
+            inputSO = SOUtil.Find<InputReaderSO>();    
+        }
 
         void Awake()
         {
             inputSO.Gameplay.MoveChangedEvent += OnInputMove;
-
-            
+            gridMovement = GetComponent<GridMovement>();
         }
 
-        void Update()
+        void OnInputMove(Vector2 input)
         {
-            setMoveDir.Move(_inputVec);
+            gridMovement.Move(input);
         }
-
-        void OnInputMove(Vector2 inputVector)
-        {
-            _inputVec = inputVector;
-        }
-
-
-        
     }
 }

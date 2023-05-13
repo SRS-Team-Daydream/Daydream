@@ -16,7 +16,7 @@ namespace Daydream
 
         [SerializeField] float _speed = 5f;
 
-        [SerializeField] SetMoveDir setMoveDir; 
+        [SerializeField] GridMovement setMoveDir; 
         [SerializeField] Seeker seeker;
         public Vector2 move;
         Path path;
@@ -24,7 +24,7 @@ namespace Daydream
         void Start()
         {
             seeker = GetComponent<Seeker>();
-            setMoveDir = GetComponent<SetMoveDir>();
+            setMoveDir = GetComponent<GridMovement>();
 
             targetPosition = target.transform.position;
             targetPosition = new Vector2
