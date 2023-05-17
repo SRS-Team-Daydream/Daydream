@@ -11,6 +11,9 @@ namespace Daydream
         [SerializeField] Grid grid;
 
         public Grid Grid => grid;
+        public bool Moving { get; private set; } = false;
+        public Vector2Int FacingDirection { get; private set; } = Vector2Int.right;
+
         public System.Action LandedOnTileEvent;
 
         Vector2Int moveDirection = Vector2Int.zero;
@@ -37,6 +40,8 @@ namespace Daydream
             {
                 targetPos = lastPos + Vector2Int.FloorToInt(input);
                 moveTime = Time.time;
+                Moving = true;
+                FacingDirection = input;
             }
         }
 
@@ -68,6 +73,10 @@ namespace Daydream
                 if (moveDirection.sqrMagnitude > 0)
                 {
                     Move(moveDirection);
+                }
+                else
+                {
+                    Moving = false;
                 }
             }
         }
