@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Kulip
+namespace Daydream
 {
     public class StaticSO<T> : ScriptableObject
     {
@@ -11,7 +11,7 @@ namespace Kulip
 
         static List<StaticSO<T>> _keepAliveList = new List<StaticSO<T>>();
 
-        public System.Action<T> ValueChangedEvent;
+        public Event<T> ValueChangedEvent;
 
         T _value;
         public T Value
@@ -20,7 +20,7 @@ namespace Kulip
             set
             {
                 _value = value;
-                ValueChangedEvent?.Invoke(_value);
+                if(ValueChangedEvent != null) ValueChangedEvent.Invoke(_value);
             }
         }
 
