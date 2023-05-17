@@ -40,12 +40,12 @@ namespace Daydream
                 },
                 {
                     ""name"": ""Action"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""d81c9a7f-b963-44f7-a448-fc09efdba912"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Cancel"",
@@ -226,6 +226,17 @@ namespace Daydream
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
+                    ""action"": ""Action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e760426f-e50d-432a-a75e-07d9aee208fb"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""Action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
