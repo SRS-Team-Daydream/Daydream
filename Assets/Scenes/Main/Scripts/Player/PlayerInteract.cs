@@ -7,10 +7,11 @@ using UnityEngine.Windows;
 namespace Daydream
 {
     [RequireComponent(typeof(PlayerMovement))]
+    [RequireComponent(typeof(GridMovement))]
     public class PlayerInteract : MonoBehaviour
     {
         [SerializeField] InputReaderSO inputSO;
-        PlayerMovement playerMovement;
+        GridMovement gridMovement;
 
         [SerializeField]
         LayerMask mask;
@@ -22,7 +23,7 @@ namespace Daydream
 
         void Awake()
         {
-            playerMovement = GetComponent<PlayerMovement>();
+            gridMovement = GetComponent<GridMovement>();
             inputSO.Gameplay.ActionEvent += Interact;
         }
 
@@ -34,7 +35,7 @@ namespace Daydream
         void Interact()
         {
             Collider2D collider = Physics2D.OverlapPoint(
-                transform.position + (Vector3)(Vector2)playerMovement.FacingDirection,
+                transform.position + (Vector3)(Vector2)gridMovement.FacingDirection,
                 mask.value
             );
             if (collider != null)
