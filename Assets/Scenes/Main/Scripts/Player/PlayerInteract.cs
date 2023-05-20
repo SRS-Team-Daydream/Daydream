@@ -19,6 +19,7 @@ namespace Daydream
         void Reset()
         {
             inputSO = SOUtil.Find<InputReaderSO>();
+            InventoryItemInfoPanel.itemUseEvent += ItemInteract(InventoryItemInfoPanel.itemUseEvent.inventoryItem);
         }
 
         void Awake()
@@ -31,6 +32,11 @@ namespace Daydream
         ///EG: public void ItemInteract(InventoryItemSO)
         ///or probably even better, make Interact into InteractInternal with an overload for 
         ///no inventory item and inventory item, and make the public function Interact
+
+        public void ItemInteract(InventoryItemSO inventoryItem)
+        {
+
+        }
 
         void Interact()
         {

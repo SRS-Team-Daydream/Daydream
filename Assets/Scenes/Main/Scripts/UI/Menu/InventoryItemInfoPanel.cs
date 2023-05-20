@@ -20,6 +20,13 @@ namespace Daydream
         [SerializeField]
         public Selectable FirstSelected;
 
+        [SerializeField]
+        Button useButton;
+
+        [SerializeField]
+        public EventSO<Object> itemUseEvent;
+
+
         void Reset()
         {
             TMP_Text[] tmps = GetComponentsInChildren<TMP_Text>();
@@ -36,6 +43,13 @@ namespace Daydream
                 }
             }
             image = GetComponentInChildren<Image>();
+
+            Button[] buttons = GetComponentsInChildren<Button>();
+            foreach(Button button in buttons)
+            {
+                button.onClick.AddListener(OnButtonClicked);
+            }
+          
         }
 
         public void SetInventoryItem(InventoryItemSO inventoryItem)
@@ -43,6 +57,15 @@ namespace Daydream
             name.text = inventoryItem.Name;
             image.sprite = inventoryItem.Sprite;
             description.text = inventoryItem.Description;
+            useButton.onClick.AddListener(() => OnButtonClicked(inventoryItem));
         }
+
+        void OnButtonClicked() { }
+
+        void OnButtonClicked(InventoryItemSO inventoryItem)
+        {
+            itemUseEvent?.Invoke(inventoryItem);
+        }
+        
     }
 }
