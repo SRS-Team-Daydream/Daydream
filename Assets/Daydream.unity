@@ -485,6 +485,10 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0.09803922
       objectReference: {fileID: 0}
+    - target: {fileID: 8324122759083806309, guid: 60b3607788238374680057f5a4deb4d1, type: 3}
+      propertyPath: startNode
+      value: DeityStart
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6891966002006989795, guid: 60b3607788238374680057f5a4deb4d1, type: 3}
     m_RemovedGameObjects:
