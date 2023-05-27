@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d7db36b8f78823340a11bb89b7a95a5e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  LastImportHadImplicitStringIDs: 0
+  LastImportHadAnyStrings: 0
+  isSuccessfullyParsed: 0
+  parseErrorMessages:
+  - "Assets/YarnSpinner/scene.yarn: 32:2: Error: Unexpected \"elseif \" while reading
+    a statement\r\n<<elseif $DeityInteracted == true>>\r\r\n  ^^^^^^^\r\n"
+  - "Assets/YarnSpinner/scene.yarn: 35:2: Error: Unexpected \"endif\" while reading
+    a statement\r\n<<endif>>   \r\r\n  ^^^^^\r\n"
