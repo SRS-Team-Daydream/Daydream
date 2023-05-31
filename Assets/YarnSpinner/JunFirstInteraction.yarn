@@ -1,0 +1,263 @@
+﻿title: JunFirstInteraction
+tags:
+---
+Jun: AH! Who are you? How did you get in my room?
+->My name is Shoshanna! Your mom sent me up.
+    <<jump JunOption1>>
+->Haven't I always been here? I live next door. We go to school together.
+    <<jump JunOption2>>
+->I am an emissary sent by the Deity to help you out of here.
+    <<jump JunOption3>>
+===
+title: JunOption1
+position: -157,232
+---
+Jun: What is the "deity"? God? 
+->In a way...
+    Jun: Are you some sort of angel?
+    ->No. I am just a girl.
+        Jun: Just a girl? Why would God send a girl to help me.
+        ->Maybe They think a girl would understand more.
+            Jun: What are you supposed to be, a weird empath? I don't need to be understood like that.
+            Jun: If you understand twig-o-nom-etry then sure, I'd pay you to do that homework.
+            Jun: But I'm fine. Really.
+            Jun: I don't even know why you are here?
+            ->Tell me about yourself.
+                Jun: I'm not that interesting...
+                ->I don't think you're uninteresting.
+                    <<jump Uninteresting>>
+        ->Maybe I know something you don't know.
+            Jun: That might be so...
+            Jun: You're new in town afer all.
+            Jun: What truths do you have to tell me? What's your message?
+            ->This place is a figment of your imagination.
+                <<jump Imagination>>
+        ->Well, They don't have to make sense. It simply is.
+            Jun: And God likes to play cruel tricks on good people I guess.
+            Jun: So it goes...
+            Jun: Maybe I should have paid attention at Temple. Maybe if I did that, you would be more helpful.
+            Jun: Maybe this is just a weird dream....
+            -> How do you know anything is real? This place certainly isn't.
+                <<jump Unreality>>
+    ->Yes, you need to come with me.
+        Jun: How can I know that you're actually an angel. Angels aren't real! They're fairytales...
+        <<jump Unreality>>
+===
+title: JunOption2
+position: 121,219
+---
+Jun: Oh, you new in town?
+->Yes, I moved in next door.
+    Jun: Oh! It is nice to see a new face in the neighborhood.
+    Jun: I'm Jun. My mom probably already told you that.
+    Jun: You look young. Like a kid. Have you met Lydia? She should be downstairs.
+    Jun: She would probably be better to hang out with. She has all sorts of games and stories to tell.
+    Jun: She's great at drawing.
+    Jun: I'm not too interesting. I am just reading.
+    ->I don't think you're uninteresting.
+        <<jump Uninteresting>>
+    ->What are you reading?
+        Jun: It's an odd sort of book of poetry. It doesn't feel like poetry.
+        Jun: It reads like music but, also like a biography.
+        Jun: The poet moves in movements, the timber of the word swaying in the wind.
+        Jun: He just calls it "A"
+        Jun: "A" what? I'm not sure...
+        ->A life?
+            Jun: It feels like a scene in a bottle.
+            Jun: Except the room is filled with different scenes. Some of ship wrecks. Some of vacations at sea.
+            Jun: Who are you again?
+            ->My name is Shoshanna! Your mom sent me up.
+                <<jump JunOption1>>
+            ->Haven't I always been here? I live next door. We go to school together.
+                <<jump JunOption2>>
+            ->I am an emissary sent by the Deity to help you out of here.
+                <<jump JunOption3>>
+            ->You're a weird kid.
+                Jun: You're one to judge.
+                Jun: Who are you anyways?
+                ->My name is Shoshanna! Your mom sent me up.
+                    <<jump JunOption1>>
+                ->Haven't I always been here? I live next door. We go to school together.
+                    <<jump JunOption2>>
+                ->I am an emissary sent by the Deity to help you out of here.
+                    <<jump JunOption3>>
+        ->A song?
+            Jun: The song must be a fugue. Playing a cacocaphonous noise.
+            Jun: It's a song that's almost too loud to bear.
+            Jun: I do not know how long I have had this book but, I haven't be able to finish it because of it its terrifying noise....
+            Jun: Who are you again?
+            ->My name is Shoshanna! Your mom sent me up.
+                <<jump JunOption1>>
+            ->Haven't I always been here? I live next door. We go to school together.
+                <<jump JunOption2>>
+            ->I am an emissary sent by the Deity to help you out of here.
+                <<jump JunOption3>>
+            ->You're a weird kid.
+                Jun: You're one to judge.
+                Jun: Who are you anyways?
+                ->My name is Shoshanna! Your mom sent me up.
+                    <<jump JunOption1>>
+                ->Haven't I always been here? I live next door. We go to school together.
+                    <<jump JunOption2>>
+                ->I am an emissary sent by the Deity to help you out of here.
+                    <<jump JunOption3>>
+        ->A breath of fresh air
+            Jun: This book feels alive. Like it was imbued by the breath of life itself.
+            Jun: Stop for a second, can you hear that...
+            <<pause>>//pause dialogue
+            <<set $breath to true>> //cue breathing noises
+            <<resume>>//play rest of dialogue
+            Jun: Who are you again?
+            ->My name is Shoshanna! Your mom sent me up.
+                <<jump JunOption1>>
+            ->Haven't I always been here? I live next door. We go to school together.
+                <<jump JunOption2>>
+            ->I am an emissary sent by the Deity to help you out of here.
+                <<jump JunOption3>>
+            ->You're a weird kid.
+                Jun: You're one to judge.
+                Jun: Who are you anyways?
+                ->My name is Shoshanna! Your mom sent me up.
+                    <<jump JunOption1>>
+                ->Haven't I always been here? I live next door. We go to school together.
+                    <<jump JunOption2>>
+                ->I am an emissary sent by the Deity to help you out of here.
+                    <<jump JunOption3>>
+->No, I'm just passing through.
+    Jun: Then why are you here?
+    <<jump JunOption1>>
+===
+title: JunOption3
+position: 294,-7
+---
+Jun: Oh. I have never seen you around. I swear I would remember you but...I don't.
+Jun: Geez, this is embarrassing...
+->It's alright we haven't really interacted. Tell me about yourself
+===
+title: Unreality
+position: 239,10
+---
+Jun: What do you mean?
+->This place is a figment of your imagination.
+    <<jump Imagination>>
+===
+title: Imagination
+position: 249,20
+---
+Jun: This is stupid. Do you really expect me to believe that?
+Jun: You're wasting my time with this.
+Jun: I have bigger things to worry about.
+Jun: This is all real. I am living in a real place and having real experiences.
+Jun: Why would someone make this place up, hm? This boring place. Why would I dream of school? Dream of only one friend? Dream of stress?
+->The mind does crazy things.
+    Jun: That doesn't make sense.
+    Jun: You must be lying to me. Playing tricks on me. Why would an angel look like you?
+    Jun: Angels are supposed to be divine. You, are simple.
+    Jun: This has to be a prank. Did the Steve the Stag set you up to this?
+    ->Steve the Stag?
+        Jun: Yeah, he's a gross jock. On the legball team and everything. Him and his buddies like to pick on me an Weevil.
+        *Steve was one of the jocks you fought for with Weevil*
+        ->No, I wasn't sent by him. Trust me, you won'thave to deal with him anytime soon.
+            Jun: Then who sent you?
+            ->Tell Jun the truth
+                Jun: So...I'm dead?
+                ->Yes.
+                    Jun: Am I in hell?
+                    ->No, Jun, this is the World To Come.
+                        Jun: Then why do I feel this way?
+                        ->We make hell for ourselves when it doesn't exist to torture ourselves.
+                            Jun: Despite, I don't want to leave. I'm not alone here. I'm home. Home!
+                            Jun: I don't care if I am dead, this is life once more. 
+                            Jun: I can't leave. Not yet.
+                            Jun: I am about to graduate. I don't want to grow up.
+                            ->Growing up scares everyone.
+                                <<jump GrowingUp>> //add condition so no infinite loop
+===
+title: Uninteresting
+position: 30,30
+---
+Jun: You wouldn't say that if you knew me.
+Jun: I'm just some bug, from some dumb, little mountain town. 
+Jun: I sit in the back of the class and I am easy to forget.
+Jun: My only friend is Weevil. He's great. But he is destined for bigger and better things...
+Jun: He is going far away from this town to Wheastleyan to study grain.
+Jun: He's such a cool bug.
+Jun: Me? I don't know what I am doing. I'm graduating this year and I haven't really *done* anything.
+Jun: Growing up scares me...
+->Growing up scares everyone.
+    <<jump GrowingUp>>
+===
+title: GrowingUp
+position: 40,40
+---
+Jun: You sound like my mom...
+<<wait 1>>
+Jun: It's embarrassing. Being an adult makes me nervous. 
+Jun: I'm not prepared. 
+Jun: Talking to people makes me nervous. I can't even order for myself.
+Jun: People at school don't even know me.
+Jun: The only reason I know Weevil is because he was tutoring me. //add variant if coming from the [we make hell for ourselves] branch.
+->If you had a wish what would you want to do?
+    Jun: Start over again.
+    Jun: This place feels like a dream. Like a nightmare I can't wake from where I have no pants and I'm at school and everyone is laughing at me. Except it is everyday.
+    -> How do you know anything is real? This place certainly isn't.
+        <<jump Unreality>>
+->Do you have any regrets?
+    Jun: *shrugs* I suppose. Everyone has regrets.
+    Jun: My family moved here a few years back. Where I'm originally from, there were bugs just like me. I had a lot of friends.
+    Jun: But coming here, I felt alone. I couldn't trust anyone, really.
+    Jun: Everyone snickered behind my back.
+    Jun: There didn't feel like there was a point to make a ton of friends.
+    Jun. But, now no one really knows me. And I don't really know anyone. My little sister is a kid of this town and I still feel like an outsider.
+    Jun: Does this feeling go away? //add variant if coming from the [we make hell for ourselves] branch.
+    ->No. I'm afraid it doesn't.
+        Jun: Then, what's the point?
+        Jun: It is hard to change on your own.
+        Jun: I wish everything was easier...
+        ->Is there anyone you wished you talked to?
+    ->Yes, over time
+        Jun: How do I get over it then? 
+        Jun: I feel so powerless. It's the end of the year and it feels too late. Everyone is already in their own clicks, their own relationships.
+        Jun: It is all set in stone....
+        ->Is there anyone you wished you talked to?
+            Jun: It's a bit ridiculous. There is a girl from my class I have had a crush on. For as long as I can remember she has been in my life.
+            Jun: We share every class together but, we have never spoken. She always sits infront of me.
+            Jun: She is perfection, I am just her unnoticed shadow.
+            Jun: One time, I thought she smiled at me and it lit my world up like a new day. But, that smile wasn't for me. It was for the jocks that we're roughing me and Weevil up.
+            Jun: I wish I had a chance with her. But, we're too different.
+            Jun: She is so beautiful, so powerful, I am not on her radar.
+            Jun: And I think my parents would have a heart attack if I had a partner that wasn't another beetle. //add variant if coming from the [we make hell for ourselves] branch.
+            ->What is her name?
+                Jun: *dreamy* Beeanca~
+                ->The new queen? Isn't her debutante ball tonight?
+                    <<jump DebutanteBallJunConversation1>>
+===
+title: DebutanteBallJunConversation1
+position: 50,50
+---
+Jun: See, I told you it was ridiculous.
+Jun: I don't know if I am going to go, honestly. It's like the nail in the coffin. She will truly be out of reach.
+Jun: She has all this pressure to be what everyone wants her to be but I just want to know her for who she actually is.
+Jun: Is that too much to ask?
+    ->You're crazy.
+        Jun: I know, it is all very silly.
+        ->It's not too late, you should go!
+            <<jump NotTooLate>>
+    ->It's not too late, you should go!
+        <<jump NotTooLate>>
+    ->You sound like an idiot
+        Jun: I don't know why I decided to tell you any of this.
+        Jun: It would be better if you just left.
+        //<<command to leave dialogue>>
+        ->No, no, I think you should still go!
+            Jun: You think so?
+            Jun: Would you help me?
+            //<<command to jump to node quest in other yarn file>>
+===
+title: NotTooLate
+position: 60,60
+---
+Jun: Oh jeez that sounds so stressful.
+Jun: Will you help me get ready?
+//<<command to jump to node in other yarn file>>
+===
