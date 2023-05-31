@@ -1,0 +1,17 @@
+﻿title: JunEndOfLevel
+tags:
+---
+Jun: I suppose that's that. I don't know what to do now but, I know I can't stay here.
+Jun: We live as we die, even after all is said and done. 
+Jun: I think I wanted an ideal second chance. An infalliable world. But, that's not possible. I think I realized that.
+Jun: That's the paradox of life, isn't it? We always think about what would happen if we took a step back and did something different when we should be looking forward and making sure that we are living the life we wanted to.
+Jun: I lived a long life. I had a family, I had a career. I died living a full life.
+Jun: But part of me was always stuck here. If I had any wish I would be a kid again. A kid forever.
+Jun: I see now that we never actually grow up, and that's ok. We take our inner child with us.
+Jun: It is our mercy.
+->Are you ready to go back?
+    Jun: Yes. I think I am ready to go back. To be one with the World to Come.
+    Jun: There was a hive I called home but it wasn't in this town. It was with Them.
+    Jun: Thank you for everything, little one.
+    <<exit>>
+===
