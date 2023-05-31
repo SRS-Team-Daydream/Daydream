@@ -1,0 +1,42 @@
+﻿title:WeevilIntro
+tags:
+---
+Weevil:Don't mind me. 
+->Are you Weevil?
+    Weevil: You're asking a lot of questions. I've never seen you at school before. Who are you?
+    ->Jun and I go way back. 
+        Weevil:Hmmm. I've known Jun since we were larvae and I've never heard of you.
+        ->We went to summer camp together.
+            Weevil: He did mention going to camp. But you're still on thin ice. Time will tell. 
+            <<jump okQuest>>
+        ->Well maybe Jun didn't want you to know about me.
+            Weevil:He has been seceretive lately. Maybe you can help me figure out whats going on...
+            <<jump okQuest>>
+    ->I'm from another realm.
+        Weevil:I don't believe you. Can you prove it?
+        ->Look at this item! It comes from my world. //show some item from inventory
+            Weevil:Wow I've never seen anything like it. Maybe you can help!
+            <<jump okQuest>>
+        ->I don't have to prove anything to you. You don't know what I am capable of.
+            Weevil:Ok now you are scaring me. Fine. 
+            <<jump okQuest>>
+    ->It doesnt matter who I am, I need to help your friend!
+        Weevil:It matters to me. 
+        ->Let's just say I am a friend. 
+            Weevil:Hmmm. Plenty of people claim to be your friend and then turn on you. But you don't look like the popular kids, no offense. Maybe we could be friends...
+            <<jump okQuest>>
+        ->You ask too many questions. I'm not leaving until you take me to Jun!
+            Weevil:You're scary. But that gives me an idea...
+            <<jump okQuest>>
+
+
+===
+
+title: okQuest
+position: -3,167
+---
+->Ok!
+    Weevil:Before I take you to Jun, will you help me get my glasses? Some of the stags stole them as a joke today, but I can't read without them!
+    ->Yes!
+
+===

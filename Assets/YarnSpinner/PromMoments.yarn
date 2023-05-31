@@ -1,0 +1,76 @@
+﻿title:TeachersProm
+tags:
+---
+Mrs. Mothworth:Hello Jun. Is this young bug your date tonight? 
+Jun:Hi Mrs. Mothworth. This is my friend Shoshonna. She is visiting from out of town so I wanted to show her a good time.
+Mrs. Mothworth:Hello dear! I am Jun's history teacher. Are you enjoying the dance so far?
+->Yes! I am so happy he invited me. I am trying to help him work up the courage to ask the girl he likes to dance!
+    Mrs. Mothworth:Jun take that leap of faith! Life is short! 
+    Jun:What if she says no? It will be so embarassing...
+    Mrs. Mothworth: I think theres nothing embarassing about being honest. Anyone can act tough, but to put your feelings out there is a true act of bravery!
+    Jun:Thanks Mrs. Mothworth... Wish me luck.
+    Mrs. Mothworth: Good luck Jun! Ahh young love!
+
+===
+title: JocksProm
+position: 0,0
+---
+Jeremy:Woah there tiger beetle! Save some for the rest of us! Haha!
+Jun:Hi Jeremy.
+Josh:Dude can't believe you bagged a firefly! Up-top!
+Jun: I didn't "bag a firefly," this is my friend Shoshonna from out of town. I think she would appreciate it if you just talked to her normally...
+->Hi I'm Shoshonna.
+    Josh:Pleased to meet you Shonna. I'm Josh Stagger. The boys are Jeremy, Jude, Jakota, and Steve. 
+    Jeremy:How come we never see you around? I think I would notice a firefly like you hanging out in the Col...
+    ->The Col?
+        Jeremy:Bro... The Colony. Jun is she foreign or something?
+        Jun:I literally just told you she's from out of town.
+        Jeremy:Haha dude you're funny. Anyways Shona, afterparty at Jackson's place tonight. Are you coming?
+        ->Umm... probably not, no.
+            Jeremy:Whatever. Your loss bro. 
+            Jun:Sorry Shoshonna, they're just... like that with girls. 
+            
+===
+
+title: SpottedLanternProm
+position: 0,0
+---
+Larry:Hi Jun, Jun's friend. You two cleaned up nice. It's so refreshing when people try to look good for once.
+Jun:You all look great as well.
+Larry:It is important to look tasteful at these events. This is the last time I will see most of these bugs, I want them to remember me as elegent and charming when they hear my name in the paper.
+->Are you planning something big after you graduate?
+    Larry:Let's just say one day, I am going to be someone very important. The names Larry Lantern the Third, of the Lantern family, and this won't be the last time you hear that name.
+    ->Well it was nice meeting you...
+        Larry:Yes the pleasure is all yours! Bye now!
+===
+
+title: FliesProm
+position: 0,0
+---
+Jun:Hey Flin, how's your prom night going?
+Flin:Jun! I'm glad you're here.
+Jun:You too! This is my friend Shoshonna from out of town. Is it just me or are the Stags being extra Staggy tonight?
+Flin:Not just you! I left my girlfriend Fiona alone for one second and Jakota starts hitting on her! I think someone must have spiked their nectar tonight!
+Jun:Is Fiona ok?
+Flin:Oh yeah. She can take on those Stags any day. I think she stoped on his foot. Gorgeous on the outside and tough on the inside! Thats my girl!
+Jun:She's a keeper! Oh hey have you seen Weevil anywhere? We were going to come with him but he said he had to change his outfit last minute and we should meet him here!
+Flin:Oh he changed his outfit alright. He's over there talking to Frankie.
+->Wow an all pink suit!
+    Flin:Pink is Frankie's favorite color. I don't know when those two will just admit they like eachother. It's been a will-they-won't-they for the last two years! 
+    ->It's looking like they will! Look!
+        You look over to see Frankie and Weevil leaning in to have their first kiss! Magical!
+        Jun:They grow up so fast!
+        Flin:And they're both going to Beedapest Technical next year. 
+        ->So Jun... has this inspired you to ask a certain bug out?
+            Flin:Dude are you finally going to ask Beeanca out?
+            Jun:How do you know about that?
+            Flin:Let's just say I had a hunch. You better act fast! I hear Josh is going to ask her out right after she becomes queen!
+            Jun: Wish me luck!
+            Flin:You got it!
+            Jun walks away leaving you with Flin.
+            ->Does he have it?
+                Flin: Honestly, I am not sure. Beeanca is not known for being nice. But Jun is so sweet and I know he isn't going to let this crush go until he does something about it.
+                ->Yeah. I got that sense. I'm glad I'm here to help him get through this experience, good or bad. I think we should watch what happens from a safe distance, haha.
+                    Flin: Good idea, let's go!
+
+===

@@ -1,0 +1,104 @@
+﻿title:FlowerStand
+tags:
+---
+You, Jun and Weevil approach the flower stand. 
+Jun: Hi Mr. Mothing.
+Mr. Mothing: Hi kids! Jun you know you can call me Horty.
+-> Hi Mr. Horty. Can you help us pick out a corsage and boutonniere?
+    Mr. Mothing: Ah yes prom is right around the corner. Kids today are such cheepskates! In my day when you liked a bug, you showed up at her house with a bouquet of her favorite flowers as big as you could carry! 
+    Jun: I know. But I don't want to come on too strong. Mr. Horty, can you help me choose the perfect flowers for the corsage? 
+    Mr. Mothing: If I can't do it, no one can! Now tell me, who is the lucky lady?
+    Jun:  I can't say. She's a bit... out of my league... 
+    Mr. Mothing: Nonsense! There's no one too good for the lovely Janice Bug's son. What do you like about her? 
+    Jun: Well she's beautiful, and smart, and everyone looks up to her. I just know we could be perfect together. I would be a great bee friend to her. 
+    Mr. Mothing: Son, you sound like a regular love bug! Let's make something extra special. Did you know, bugs in the past used to use flowers to send hidden messages?
+    -> How?
+        Mr. Mothing: I'm glad you asked! Each flower has a specific meaning, and when you combine them, you can express complex ideas and emotions. Just like words! 
+        -> Like a secret code? 
+            Mr. Mothing: Exactly! Now are any of these striking your fancy?
+            -> What about these yellow ones? 
+                Mr. Mothing: Which ones? I have yellow crysanthemum, yellow acacia, and yellow carnations?
+                <<jump chooseYellow>>
+                
+===
+
+title:chooseYellow
+tags:
+---
+->Acacia!
+    Mr. Mothing:Yellow acacias mean secret love! Great choice!
+    Weevil:I see you staring at her and drooling in Beeology class... it's not a secret.
+    Mr. Mothing:Weevil be nice!
+    ->You know what would look good with yellow! Green! 
+        Jun:My thoughts exactly...
+        Mr. Mothing:Here are some options, I have Basil, Tarragon and Cedar Leaf!
+        <<jump chooseGreen>>
+
+->Carnation!
+    Mr. Mothing:Uh oh! Yellow carnations traditionally mean disdain! Are you sure you really like her?
+    Jun:Oh course I like her!
+    Weevil:You barely know her!
+    Mr. Mothing: Anyways... let's try choosing a flower that lets her know how much you like her!
+    <<jump chooseYellow>>
+->Crysanthemum!
+    Mr. Mothing:Yellow crysanthemums mean slighted love. Son, is this bug nice to you? 
+    Weevil:Maybe she would be if he ever had the courage to talk to her! Ha!
+    Mr. Mothing: I'm gonna pretend I didn't hear that. Jun maybe pick a different yellow flower?
+    <<jump chooseYellow>>
+
+===
+
+title:chooseGreen
+tags:
+---
+->Basil
+    Mr. Mothing:Son, Basil means hatred! You sure about this bug?
+    Mr. Mothing: I'm sure. I just don't know the first thing about flower meanings! What are the green ones again? 
+    <<jump chooseGreen>>
+->Cedar Leaf
+    Mr. Mothing:I live for thee! How romantic! We should pick one more flower! 
+    Jun:Maybe white or a pop of color?
+    ->White! Let's keep the emphasis on the yellow and green!
+        Mr. Mothing:I have white catchfly, white cherry, and white clover!
+        <<jump chooseWhite>>
+    ->A pop of indigo would really bring out the yellow!
+        Jun:I don't know if thats the best idea. When we went to get Weevil's glasses back, I saw some indigo flowers. We can't use the same flowers as one of the stags! How embarassing would that be... Mr. Horty, what white flowers do you have?
+        Mr. Mothing:I have white catchfly, white cherry, and white clover!
+        <<jump chooseWhite>>
+->Tarragon
+    Mr. Mothing:Tarragon means horror! Son are you nervous about prom night? 
+    Jun:Maybe I am a little nervous... What were the choices again?
+    <<jump chooseGreen>>
+    
+===
+
+title:chooseWhite
+tags:
+---
+->White Catchfly!
+    Mr. Mothing:Betrayal! Son you've got a knack for choosing wrong!
+    Jun: Just tell me which one is nice please...
+    Mr. Mothing: White clover means think of me! That's nice!
+    <<jump outroFlowers>>
+->White Cherry!
+    Mr. Mothing:White cherry blossoms mean deception! Are you sure? 
+    Jun:Of course I'm not sure! Prom is the most important night in high school and I don't even know if she is going to say yes! Maybe this is a mistake!
+    ->Jun don't get stressed out, Mr Horty, can you show us the nicest white flower? Jun really has to get this right. 
+        Mr. Mothing: White clover means think of me! That's nice!
+        <<jump outroFlowers>>
+->White Clover!
+    Mr. Mothing:That means think of me! How nice!
+    <<jump outroFlowers>>
+
+===
+
+title:outroFlowers
+tags:
+---
+Mr. Mothing: Perfect! Your corsage is coming right up! 
+->How much do we owe you?
+    Mr. Mothing:Nonsense, you let an old bug like me indugle in what I love most, Flower esoterica! It's on the house kids.
+    ->Thank you Mr. Horty!
+        Mr. Mothing:And go get 'em Jun! Your flowers are the bee's knees!
+
+===

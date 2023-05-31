@@ -1,0 +1,46 @@
+﻿title: DenizenOutfitQuest
+tags:
+position: 0,0
+---
+Jun: I don't know if I can ask out Beeanca. She's queen bee and I'm a beetle.
+-> Yes you can. You're going to be the coolest beetle in the colony tonight.
+    Jun: But I have nothing to wear! What says "Bees want me. Beetles want to be me"?
+    -> Let's look in your closet!
+    Jun's closet is a mess. There is a pile of clothes that are not quite clean but not dirty enough to wash.
+        ->What about this blue shirt?
+            Weevil: Yeah that would really bring out your wings!
+            <<jump DenizenShirt>>
+        ->What about this brown shirt?
+            Weevil: Yeah that would really bring out your wings!
+            <<jump DenizenShirt>>
+
+===
+title: DenizenShirt
+position: -19,231
+---
+Jun: Is it trying too hard?
+->Maybe choose something simple for the pants so you don't upstage her. 
+    Jun:You're right. She loves to be the center of attention. 
+     ->You should wear the black pants! 
+            Jun:Good idea!
+            <<jump DenizenJacket>>
+->Too hard? It's not trying hard enought. This is Beeanca we are talking about. She wears high heels to waggle dances on a regular basis.
+     Jun:You're right. I need to think bigger.
+     -> You should wear the white pants!
+            Jun:Good idea!
+            <<jump DenizenJacket>>
+===
+title: DenizenJacket
+position: -60,457
+---
+ -> Do you have a jacket?
+    Jun: Yeah! It's a green one my dad gave me!
+    Weevil: It makes you look sexy yet respectable... like a praying mantis.
+     -> Sounds perfect! What shoes are you going to wear? 
+        Jun:I only have one pair of nice shoes anyways.
+        ->Let's see the final outfit! 
+        Jun puts on the final outfit. He looks boyishly charming.
+            ->Now all you need is a boutonniere.
+                Jun:I almost forgot! Oh and I need to get her a corsage too. Do you want to come to the flower store with me?
+                ->Let's go!
+===
