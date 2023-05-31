@@ -9,9 +9,19 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 053561912b1654d80a424bb0696a74ae, type: 3}
   sourceScripts:
+  - {fileID: 6391573757903218779, guid: 672348f8358a55c4ebd9039e661fbc02, type: 3}
+  - {fileID: 6391573757903218779, guid: 6e6a3174af76d7f47b9364da4bf10d0d, type: 3}
   - {fileID: 6391573757903218779, guid: a5483d3aa451930459e95ce33d6a6bef, type: 3}
   compileErrors: []
-  serializedDeclarations: []
+  serializedDeclarations:
+  - name: $breath
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in JunFirstInteraction.yarn, node JunOption2
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 672348f8358a55c4ebd9039e661fbc02, type: 3}
   defaultLanguage: en-US
   languagesToSourceAssets: []
   useAddressableAssets: 0
