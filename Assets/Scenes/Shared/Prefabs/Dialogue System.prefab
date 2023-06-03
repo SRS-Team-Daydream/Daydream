@@ -385,7 +385,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 12
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -761,6 +761,7 @@ GameObject:
   - component: {fileID: 8324122759083806309}
   - component: {fileID: 8575545709269339762}
   - component: {fileID: 8258167942380495280}
+  - component: {fileID: 3760743702828230848}
   m_Layer: 0
   m_Name: Dialogue System
   m_TagString: Untagged
@@ -871,6 +872,20 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   enableActionOnStart: 1
+--- !u!114 &3760743702828230848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214633822117234200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce27abf7b3ecc174883b209e40abea36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: 95d74a4213b527147a8752beb76c1a5e, type: 2}
+  startDialogueEvent: {fileID: 11400000, guid: 3b8d4eb73365a6046a59f1cc0311c8e8, type: 2}
 --- !u!1 &8041584371172271019
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +980,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 13
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
