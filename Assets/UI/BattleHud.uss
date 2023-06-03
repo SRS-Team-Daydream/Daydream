@@ -19,7 +19,7 @@
 }
 
 .unity-base-slider__tracker {
-    background-color: rgba(180, 130, 98, 0.7);
+    background-color: rgba(180, 130, 98, 0.24);
 }
 
 .unity-base-slider__dragger {
@@ -39,11 +39,11 @@
     background-image: url('project://database/Assets/UI/bead.png?fileID=2800000&guid=8baeef0cbfac13e458f28ccf8973b2b5&type=3#bead');
     -unity-background-image-tint-color: rgb(255, 255, 255);
     -unity-background-scale-mode: stretch-to-fill;
-    width: 37px;
-    height: 37px;
+    width: 45px;
+    height: 45px;
     align-self: auto;
     justify-content: flex-start;
     align-items: auto;
     padding-bottom: 2px;
-    top: 7px;
+    top: 2px;
 }
