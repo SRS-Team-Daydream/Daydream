@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0336784495b87fd4a943d2825fb61932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScene: main
+  mainScene: deityScene
 --- !u!114 &1557685816
 MonoBehaviour:
   m_ObjectHideFlags: 0
