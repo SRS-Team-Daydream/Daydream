@@ -30,6 +30,7 @@ namespace Daydream
         void Start()
         {
             lastPos = (Vector2Int)grid.WorldToCell(transform.position);
+            targetPos = lastPos;
             transform.position = grid.CellToWorld((Vector3Int)lastPos);
         }
 
