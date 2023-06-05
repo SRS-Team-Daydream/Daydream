@@ -28,6 +28,11 @@ namespace Daydream
             inputSO.Gameplay.ActionEvent += Interact;
         }
 
+        void OnDestroy()
+        {
+            inputSO.Gameplay.ActionEvent -= Interact;
+        }
+
         ///TODO: Public interact variant that allows the inventory to make the player interact using an item <summary>
         ///EG: public void ItemInteract(InventoryItemSO)
         ///or probably even better, make Interact into InteractInternal with an overload for 

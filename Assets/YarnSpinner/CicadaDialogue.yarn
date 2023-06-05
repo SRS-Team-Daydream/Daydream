@@ -12,7 +12,7 @@ tags:
 ---
 Cicada: You're not from around here are ya? I don't think I have ever seen you around here.
 Cicada: This mountain town is Beedapest. It's a tight knit community but we've been here for ages, since before my first hibernation!
-Cicada: I have seen this community grow from a humble, honey trading outpost into the bustling town center you see today. 
+Cicada: I have seen this community grow from a humble, honey trading outpost into the bustling town center you see today.
 Cicada: I noticed we got some new families since when I last went into hibernation. I woke up and suddenly there were some new beetles we hadn't had before. I don't know how to feel about it, these bugs were never in my neighborhood when I was a little larvae...
 Cicada: I suppose you are one our new visitors, you don't look like you're from around these parts. Eh...the times sure are a'changin.
 ->Ask for more town information
@@ -33,11 +33,11 @@ Cicada: You're looking for who?? The only Dennis I know died during the last mol
     Cicada: ...
     Cicada: ...!
     Cicada: ...!
-    Cicada: Oh now I know who you're talkin about! Jun is one of the newer kids in town. 
+    Cicada: Oh now I know who you're talkin about! Jun is one of the newer kids in town.
     Cicada: They're always hanging out with that nerdy kid. What's his name? Weevil, I think.
     Cicada: Weevil and Jun are practically inseparable! Weevil would know where they are.
-    Cicada: They always like to hang out at that comic book store down the way. 
-    Cicada: Jun's family...is bit odd but, I suppose all beetles are. I don't trust them. 
+    Cicada: They always like to hang out at that comic book store down the way.
+    Cicada: Jun's family...is bit odd but, I suppose all beetles are. I don't trust them.
     Cicada: I just don't get why they felt like they could come here? We're a hive, not a burrow. This place isn't meant for them.
     ->What do you mean?
         Cicada: This here town was a started by the Honey & Vinegar Honey when my pop's brood was merely just a thought.
@@ -49,7 +49,7 @@ Cicada: You're looking for who?? The only Dennis I know died during the last mol
         ->Ask about his hibernation
             <<jump CicadaHibernation>>
         ->I don't have any more questions.
-            <<end>> //end dialogue
+            <<stop>> //end dialogue
 ===
 title: CicadaHibernation
 tags:
@@ -63,7 +63,7 @@ Cicada: I carry the tradition of my ancestors with this hibernation of the highe
 ->Ask for more town information
     <<jump CicadaTownInformation>>
 ->I don't have any more questions.
-    <<end>> //end dialogue
+    <<stop>> //end dialogue
 ===
 title: CicadaTownInformation
 tags:
@@ -71,11 +71,11 @@ tags:
 Cicada: Oh, welcome to Beedapest! Just a little mountain town that's as sweet as the honey we make. We were established as a honey manufacturing hub under the First Queen. Now, generation and generation since, we have grown, creating a community that is tight knit.
 Cicada: The new queen is going to take the throne tonight. She's all grown up!
 Cicada: She will be the Seventh Queen and usher in a whole new era for our town.
-Cicada: The whole town is getting ready! Decorations are going up, a feast is being made. At the School Dance, she will be coronated! 
+Cicada: The whole town is getting ready! Decorations are going up, a feast is being made. At the School Dance, she will be coronated!
 Cicada: It is a celebration that you don't want to miss.
 ->Who is the Queen?
     Cicada: Oh, Beeanca is the queen presumptive! She is the belle of this great community. A caring sweetheart and beautiful soul.
-    Cicada: Beeanca will be the seventh queen to reign over this little town. 
+    Cicada: Beeanca will be the seventh queen to reign over this little town.
     Cicada: The oracle sacrabs foretold that she would usher in an era of change, harmony and elevation.
     Cicada: I hope that is true. We need better times.
     ->Ask about his hibernation
@@ -83,5 +83,5 @@ Cicada: It is a celebration that you don't want to miss.
     ->Ask about the denizen
         <<jump CicadaDenizenInfo>>
     ->I don't have any more questions.
-        <<end>> //end dialogue
+        <<stop>> //end dialogue
 ===

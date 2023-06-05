@@ -32,6 +32,11 @@ namespace Daydream
             animator = GetComponentInChildren<Animator>();
         }
 
+        void OnDestroy()
+        {
+            inputSO.Gameplay.MoveChangedEvent -= OnMoveChange;    
+        }
+
         void OnMoveChange(Vector2Int input)
         {
             gridMovement.SetMoveDirection(input);
