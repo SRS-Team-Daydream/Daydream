@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BeedapestTownMap.unity
     guid: 29d132c1a5ac7154281130ff7f07e0a6
+  - enabled: 1
+    path: Assets/Scenes/DebutanteGym.unity
+    guid: 55e4add50f61e9e4581780999844063b
   m_configObjects: {}
