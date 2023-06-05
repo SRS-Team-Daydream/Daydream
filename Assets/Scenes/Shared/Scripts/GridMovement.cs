@@ -37,8 +37,10 @@ namespace Daydream
         public void Move(Vector2Int input)
         {
             //only set new targetPos is previous target has been reached
-            if (lastPos == targetPos)
+            if (input.sqrMagnitude > 0 && lastPos == targetPos)
             {
+                FacingDirection = input;
+
                 var newTarget = lastPos + Vector2Int.FloorToInt(input);
                 Collider2D wall = Physics2D.OverlapPoint(
                     (Vector2)grid.CellToWorld((Vector3Int)newTarget),
@@ -49,7 +51,6 @@ namespace Daydream
                     targetPos = newTarget;
                     moveTime = Time.time;
                     Moving = true;
-                    FacingDirection = input;
                 }
                 else
                 {

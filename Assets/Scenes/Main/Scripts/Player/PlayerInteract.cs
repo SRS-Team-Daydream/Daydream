@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,6 +39,7 @@ namespace Daydream
                 transform.position + (Vector3)(Vector2)gridMovement.FacingDirection,
                 mask.value
             );
+            Debug.Log(transform.position + (Vector3)(Vector2)gridMovement.FacingDirection);
             if (collider != null)
             {
                 Interactable interactable = collider.gameObject.GetComponent<Interactable>();
