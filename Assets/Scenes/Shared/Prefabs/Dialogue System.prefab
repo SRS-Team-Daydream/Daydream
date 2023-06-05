@@ -808,7 +808,7 @@ MonoBehaviour:
   - {fileID: 3015812379230140977}
   - {fileID: 8041584371679530949}
   startNode: Start
-  startAutomatically: 1
+  startAutomatically: 0
   runSelectedOptionAsLine: 0
   lineProvider: {fileID: 0}
   verboseLogging: 1

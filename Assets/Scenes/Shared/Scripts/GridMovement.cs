@@ -9,6 +9,7 @@ namespace Daydream
     {
         [SerializeField] float interval = 0.2f;
         [SerializeField] Grid grid;
+        [SerializeField] LayerMask wallLayerMask;
 
         public Grid Grid => grid;
         public bool Moving { get; private set; } = false;
@@ -38,10 +39,23 @@ namespace Daydream
             //only set new targetPos is previous target has been reached
             if (lastPos == targetPos)
             {
-                targetPos = lastPos + Vector2Int.FloorToInt(input);
-                moveTime = Time.time;
-                Moving = true;
-                FacingDirection = input;
+                var newTarget = lastPos + Vector2Int.FloorToInt(input);
+                Collider2D wall = Physics2D.OverlapPoint(
+                    (Vector2)grid.CellToWorld((Vector3Int)newTarget),
+                    wallLayerMask.value
+                );
+                if(wall == null)
+                {
+                    targetPos = newTarget;
+                    moveTime = Time.time;
+                    Moving = true;
+                    FacingDirection = input;
+                }
+                else
+                {
+                    Moving = false;
+                    moveDirection = Vector2Int.zero;
+                }
             }
         }
 
