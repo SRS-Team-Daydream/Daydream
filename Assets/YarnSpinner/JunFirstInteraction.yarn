@@ -259,5 +259,5 @@ position: 60,60
 ---
 Jun: Oh jeez that sounds so stressful.
 Jun: Will you help me get ready?
-//<<command to jump to node in other yarn file>>
+<<jump DenizenOutfitQuest>> //<<command to jump to node quest in other yarn file>>
 ===
