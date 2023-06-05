@@ -1,0 +1,94 @@
+﻿title: Start_Game
+tags:
+position: -281,-186
+---
+//beginning of game; possibly black screen player can't move
+You come to on a pile of stones.
+Pebbles on top of boulders, it is as though you fell into this realm like a leaf from a tree.
+//<<stop>>
+//<<wait 1.5>>
+It is dark and you cannot see; sobs echo through the abyss forward. Light the lantern.
+-> Light the Lattern
+    ???: Hello?
+    ???: What's there?
+//<<stop>>
+//<<wait 2>>
+???: Light!
+???: You have returned. We shall be whole.
+<<jump Deity_Interaction>>
+===
+title: Deity_Interaction
+tags:
+position: -329,-11
+---
+Deity: Oh, you're so small, little light. Where did you come from?
+Deity: We created many things in this realm but We do not recall making you...
+//<<wait 1>>
+Deity: One does not pass through...The World to Come is an inevitablity. A finality.
+Deity: There is no beginning nor end, we have always been here and we will always be here. It has always been written that way.
+Deity: You are the first new thing We have seen in...
+//<<wait 1>>
+Deity: It has been so long.
+Deity: Do you know what it is like to be isolated and alone in the void?
+Deity: No friends to talk to you.
+Deity: The darkness your only company.
+//<<wait 2>>
+Deity: Where did you get that light, little one? I thought light left this place long ago.
+-> I made it
+    Deity: You made it?
+    Deity: You can make light?
+    -> It's easy, I just lit a match.
+        Deity: Do you like light?
+        -> It's warm
+        -> It's comforting
+<<jump Discussion>>
+===
+title: Discussion
+tags:
+position: -314,226
+---
+Deity: We hate the dark. Our mother always made sure the nightlight was on but...she's gone now.
+Deity: We cannot make our own light, we were not taught how to.
+Deity: Once upon a time, denizens of this realm used embody light. A shining, collective whole.
+Deity: The Denizens used to house the light we found in the creations made...
+Deity: But that time has passed. The Denizens left one by one.
+Deity: They left to explore all that the realm has to offer.
+Deity: They ventured further and further into the pitch of black, the more I lost them. Somewhere in the search of more light but the further they went, they lost themselves in their own fears.
+Deity: They were scared and found solace in an echochamber of their own anxieties.
+Deity: They completely forgot about me.
+Deity: The light has dimmed from this realm, scattering into far chammbers and crevices. The vessels of light that used to illuminate this realm have been destroyed. Shattered.
+Deity: I have been crying since they left. Tears flooded this realm and washed away all of our creations. Without them, I am nothing. We are nothing.
+Deity: You can learn a lot of things in books. Who will live and who will die. You can learn about the sun, the moon and the stars. But what does that all mean when you exist in the pitch black?
+Deity: It is a blessing to be able to create your own light. We thought it was all but gone.
+Deity: What are you little one?
+-> A girl
+-> A hero
+-> Lost
+-> Scared
+<<jump quest>>
+===
+title: quest
+tags:
+position: -110,379
+---
+Deity: You are all those things. That's what makes you special.
+Deity: You are not simply passing through, We think you are here for a reason.
+Deity: A hero needs a duty. Even a scared one.
+Deity: Little creator of light, only you can bring back our denizens.
+Deity: Here, to help you on your quest, we give you an ABACUS. The beads are powerful.
+Deity: In the balance of life and death, light and darkness, you must be purposeful in your actions. The ABACUS will help you keep count. Calculate what you give and take from this world.
+//abacus added to inventory
+Deity: You are a lot like our friends. That worries us.
+Deity: We a happy at your arrival but fearful you may lose yourself in this place as well.
+Deity: To find your way, we give you this BALL OF STRING.
+Deity: Tie a knot whenever you can to remember the path you took.
+Deity: The World To Come is a maze, with dead ends and puzzles that will trick you.
+Deity: Everything you observe here, is but a figment of an imagination.
+Deity: This is but a dream come real, everything, including us, in this moment right now, is just a fleeting thought.
+Deity: Your actions will change the way the Denizens think. They are lost in their own worlds.
+Deity: When they left us, we were powerless. We cannot bring them back. They must come back themselves.
+Deity: With this Abacus and Ball of String, you must talk them out of their trance.
+Deity: They are just scared. Alone and scared, like us.
+Deity: Like you.
+<<change_scene BeedapestTownMap>>
+===
