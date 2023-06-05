@@ -18,14 +18,14 @@
     width: 1205px;
 }
 
-.unity-base-slider__tracker {
+#sliders .unity-base-slider__tracker {
     background-color: rgba(219, 150, 106, 0.25);
-    background-image: url('project://database/Assets/UI/Texture%20(1).png?fileID=2800000&guid=0e59561f477c4ab40b33a6150f2b7aff&type=3#Texture (1)');
+    background-image: url('project://database/Assets/Scenes/Battle/UI/Texture%20(1).png?fileID=2800000&guid=0e59561f477c4ab40b33a6150f2b7aff&type=3#Texture (1)');
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 115, 0);
 }
 
-.unity-base-slider__dragger {
+#sliders .unity-base-slider__dragger {
     background-color: rgba(255, 255, 255, 0);
     border-left-width: 0;
     border-right-width: 0;
@@ -39,8 +39,8 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
-    background-image: url('project://database/Assets/UI/bead.png?fileID=2800000&guid=8baeef0cbfac13e458f28ccf8973b2b5&type=3#bead');
-    -unity-background-image-tint-color: rgb(255, 225, 252);
+    background-image: url('project://database/Assets/Scenes/Battle/UI/bead.png?fileID=2800000&guid=8baeef0cbfac13e458f28ccf8973b2b5&type=3#bead');
+    -unity-background-image-tint-color: rgb(118, 118, 118);
     -unity-background-scale-mode: stretch-to-fill;
     width: 50px;
     height: 50px;
@@ -51,7 +51,11 @@
     top: 2px;
 }
 
-.unity-slider {
+#sliders .unity-base-slider:focus .unity-base-slider__dragger {
+    -unity-background-image-tint-color: rgb(255, 225, 252);
+}
+
+#sliders .unity-base-slider {
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -80,7 +84,11 @@
 .unity-progress-bar__progress {
     color: rgb(0, 0, 0);
     background-color: rgb(171, 55, 55);
-    background-image: url('project://database/Assets/UI/Hpbartexture.png?fileID=2800000&guid=f131ad084a39cd849b9d7764f3d95243&type=3#Hpbartexture');
+    background-image: url('project://database/Assets/Scenes/Battle/UI/Hpbartexture.png?fileID=2800000&guid=f131ad084a39cd849b9d7764f3d95243&type=3#Hpbartexture');
     -unity-background-scale-mode: stretch-to-fill;
     -unity-background-image-tint-color: rgb(103, 255, 97);
+}
+
+.combat-button:focus {
+    -unity-background-image-tint-color: rgb(255, 0, 0);
 }
