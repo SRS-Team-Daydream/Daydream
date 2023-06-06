@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e05125ddfe3abc942b593de913c61508
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - PicNic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ca6c3a5ef02249245ab2efd85a543266, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
