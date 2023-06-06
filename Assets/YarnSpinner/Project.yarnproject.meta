@@ -20,6 +20,7 @@ ScriptedImporter:
   - {fileID: 6391573757903218779, guid: 51081322dd65a41428d04998173eed03, type: 3}
   - {fileID: 6391573757903218779, guid: 823064c0404a048eb83fd4469ab9e788, type: 3}
   - {fileID: 6391573757903218779, guid: 8b4a9afea7f5cad478247802b2da4ff5, type: 3}
+  - {fileID: 6391573757903218779, guid: d437da434478d5e4694e55592aef3b14, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $breath

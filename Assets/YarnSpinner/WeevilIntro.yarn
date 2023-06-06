@@ -42,6 +42,65 @@ position: -3,167
         <<end>>
 
 ===
+title: stagFight
+position: 
+---
+Steve the Stag: Well look who it is, little Weevil.
+Stag Goon: Hehe, that's right.
+Steve the Stag: You looking to scurry in the trash more, huh? One time wasn't enough.
+-> Hey, don't be mean to him!
+    Steve the Stag: Or what?
+    -> Give him his glasses back.
+        Steve the Stag: What glasses?
+        Stag Goon: Yeah, why would we have glasses?
+        Steve the Stag: Oh *his* glasses?
+        Steve the Stag: Let me think.
+        Steve the Stag: ...
+        Steve the Stag: ...
+        Steve the Stag: ..!
+        Steve the Stag: How about no?
+        The Stags laugh. They're loud.
+        -> Give them back or else!
+            Steve the Stag: Or else what?
+            The glasses gleam in the pocket of his jacket.
+                -> Steal the glasses
+                    Steve the Stag: Hey!
+                    This has caused a commotion in the area. The stags can't do anything now.
+                    Steve the Stag: This won't be the last of us, WEEVIL!
+                    Stag Goons: Yeah! Smell you later!
+                    <<jump questComplete>>
+                -> Kick Steve and steal the glasses
+                    Steve the Stag: Ow, ow, ow. That hurt a lot!
+                    This has caused a commotion in the area. The stags can't do anything now.
+                    Steve the Stag: This won't be the last of us, WEEVIL!
+                    Stag Goons: Yeah! Smell you later!
+                    <<jump questComplete>>
+-> Give him his glasses back.
+    Steve the Stag: What glasses?
+    Stag Goon: Yeah, why would we have glasses?
+    Steve the Stag: Oh *his* glasses?
+    Steve the Stag: Let me think.
+    Steve the Stag: ...
+    Steve the Stag: ...
+    Steve the Stag: ..!
+    Steve the Stag: How about no?
+    The Stags laugh. They're loud.
+    -> Give them back or else!
+        Steve the Stag: Or else what?
+        The glasses gleam in the pocket of his jacket.
+            -> Steal the glasses
+                Steve the Stag: Hey!
+                This has caused a commotion in the area. The stags can't do anything now.
+                Steve the Stag: This won't be the last of us, WEEVIL!
+                Stag Goons: Yeah! Smell you later!  
+                <<jump questComplete>>
+            -> Kick Steve and steal the glasses
+                Steve the Stag: Ow, ow, ow. That hurt a lot!
+                This has caused a commotion in the area. The stags can't do anything now.
+                Steve the Stag: This won't be the last of us, WEEVIL!
+                Stag Goons: Yeah! Smell you later!
+                <<jump questComplete>>
+===
 title: questCommplete
 position: -3,167
 ---
