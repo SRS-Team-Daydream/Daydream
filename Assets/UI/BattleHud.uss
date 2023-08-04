@@ -84,3 +84,205 @@
     -unity-background-scale-mode: stretch-to-fill;
     -unity-background-image-tint-color: rgb(103, 255, 97);
 }
+
+.fight-button {
+    flex-grow: 1;
+    align-items: auto;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    white-space: normal;
+    background-color: rgb(35, 0, 166);
+    left: 0;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-left-color: rgba(0, 0, 0, 0.83);
+    border-right-color: rgba(0, 0, 0, 0.83);
+    border-top-color: rgba(0, 0, 0, 0.83);
+    border-bottom-color: rgba(0, 0, 0, 0.83);
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: auto;
+    background-image: url('project://database/Assets/UI/Fight%20(3).png?fileID=2800000&guid=c5e6308183768544dbe02a081cf59399&type=3#Fight (3)');
+    scale: 1 1;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.item-button {
+    flex-grow: 1;
+    align-items: auto;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    white-space: normal;
+    background-color: rgb(241, 218, 67);
+    left: 0;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0.83);
+    background-image: url('project://database/Assets/UI/Item%20(1).png?fileID=2800000&guid=691ab6e1593a0ea44b25886a9e63ecc6&type=3#Item (1)');
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.run-button {
+    flex-grow: 1;
+    align-items: auto;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    white-space: normal;
+    background-color: rgb(255, 56, 61);
+    left: 0;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0.83);
+    background-image: url('project://database/Assets/UI/Run%20(1).png?fileID=2800000&guid=1420e89b42beb4341bd05c32b1fa0b6a&type=3#Run (1)');
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.fight-button:hover {
+    flex-grow: 1;
+    align-items: auto;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    white-space: normal;
+    background-color: rgb(12, 166, 0);
+    left: 0;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-left-color: rgba(0, 0, 0, 0.83);
+    border-right-color: rgba(0, 0, 0, 0.83);
+    border-top-color: rgba(0, 0, 0, 0.83);
+    border-bottom-color: rgba(0, 0, 0, 0.83);
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: auto;
+    background-image: url('project://database/Assets/UI/Fight%20(3).png?fileID=2800000&guid=c5e6308183768544dbe02a081cf59399&type=3#Fight (3)');
+    scale: 1 1;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.item-button:hover {
+    flex-grow: 1;
+    align-items: auto;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    white-space: normal;
+    background-color: rgb(67, 241, 167);
+    left: 0;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0.83);
+    background-image: url('project://database/Assets/UI/Item%20(1).png?fileID=2800000&guid=691ab6e1593a0ea44b25886a9e63ecc6&type=3#Item (1)');
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.run-button:hover {
+    flex-grow: 1;
+    align-items: auto;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    white-space: normal;
+    background-color: rgb(255, 56, 224);
+    left: 0;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0.83);
+    background-image: url('project://database/Assets/UI/Run%20(1).png?fileID=2800000&guid=1420e89b42beb4341bd05c32b1fa0b6a&type=3#Run (1)');
+    -unity-background-scale-mode: stretch-to-fill;
+}
