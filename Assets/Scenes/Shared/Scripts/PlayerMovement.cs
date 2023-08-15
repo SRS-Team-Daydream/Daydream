@@ -60,6 +60,7 @@ namespace Daydream
             {
                 //animator.SetInteger("transitionVar", -1);
                 animator.Play("PlayerDown", -1, 0f);
+                
             }
 
             if (movementVar.x > 0)

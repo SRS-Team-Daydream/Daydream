@@ -15,7 +15,6 @@ namespace Daydream
             IEnumerator ChangeSceneCoroutine()
             {
                 yield return new WaitForSeconds(0.5f);
-
                 SceneManager.LoadScene(scene);
             }
 
