@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/deityScene.unity
     guid: 14bf9c44b315363479f63de29d319bf7
   - enabled: 1
+    path: Assets/Scenes/Wisp.unity
+    guid: 727b6e86b2fa0c14a882614865749707
+  - enabled: 1
     path: Assets/Scenes/BeedapestTownMap.unity
     guid: 29d132c1a5ac7154281130ff7f07e0a6
   - enabled: 1

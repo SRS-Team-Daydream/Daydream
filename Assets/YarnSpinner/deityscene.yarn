@@ -90,5 +90,7 @@ Deity: When they left us, we were powerless. We cannot bring them back. They mus
 Deity: With this Abacus and Ball of String, you must talk them out of their trance.
 Deity: They are just scared. Alone and scared, like us.
 Deity: Like you.
-<<change_scene BeedapestTownMap>>
+//<<change_scene BeedapestTownMap>>
+<<wait 1>>
+<<change_scene Wisp>>
 ===
