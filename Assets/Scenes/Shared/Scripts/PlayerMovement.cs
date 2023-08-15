@@ -50,29 +50,24 @@ namespace Daydream
 
         void Animate(Vector2 movementVar)
         {
-            if (movementVar.y > 0)
-            {
-                //animator.SetInteger("transitionVar", 1);
-                animator.Play("PlayerUp", -1, 0f);
-            }
+            float Speed = movementVar.magnitude;
+            animator.SetFloat("Horizontal", movementVar.x);
+            animator.SetFloat("Vertical", movementVar.y);
+            animator.SetFloat("Input", Speed);
 
-            else if (movementVar.y < 0)
+            if(Speed > 0.01)
             {
-                //animator.SetInteger("transitionVar", -1);
-                animator.Play("PlayerDown", -1, 0f);
-                
+                animator.SetFloat("LastHorizontal", movementVar.x);
+                animator.SetFloat("LastVertical", movementVar.y);
             }
 
             if (movementVar.x > 0)
-            {
-                animator.Play("PlayerSide", -1, 0f);
-                
+            {   
                 gameObject.transform.localScale = new Vector3(1, 1, 1) * gameObject.transform.localScale.y;
             }
 
             if (movementVar.x < 0)
             {
-                animator.Play("PlayerSide", -1, 0f);
                 gameObject.transform.localScale = new Vector3(-1, 1, 1) * gameObject.transform.localScale.y;
             }
         }
