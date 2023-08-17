@@ -9,18 +9,20 @@ Pebbles on top of boulders, it is as though you fell into this realm like a leaf
 //<<wait 1.5>>
 It is dark and you cannot see; sobs echo through the abyss forward. Light the lantern.
 -> Light the Lattern
+    <<lightlantern Lantern>>
     ???: Hello?
     ???: What's there?
 //<<stop>>
 //<<wait 2>>
 ???: Light!
 ???: You have returned. We shall be whole.
-<<jump Deity_Interaction>>
+//<<jump Deity_Interaction>>
 ===
 title: Deity_Interaction
 tags:
 position: -329,-11
 ---
+<<switchcam PlayerCamera>>
 Deity: Oh, you're so small, little light. Where did you come from?
 Deity: We created many things in this realm but We do not recall making you...
 //<<wait 1>>
