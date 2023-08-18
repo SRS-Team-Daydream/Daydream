@@ -1,0 +1,54 @@
+.ContactPage {
+  padding: 1vw;
+}
+
+.ContactPage .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ContactPage .top {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.ContactPage .subject {
+  flex-grow: 1;
+  background-color: inherit;
+  color: var(--text-primary);
+  border: solid var(--accent) 1px;
+}
+.ContactPage .email {
+  flex-grow: 1;
+  background-color: inherit;
+  color: var(--text-primary);
+  border: solid var(--accent) 1px;
+}
+
+.ContactPage .message {
+  height: 70vh;
+  background-color: inherit;
+  color: var(--text-primary);
+  border: solid var(--accent) 1px;
+}
+
+.ContactPage .subject:focus,
+.email:focus,
+.message:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--accent2);
+  border: none;
+}
+
+.ContactPage .button {
+  height: 5vh;
+  background-color: inherit;
+  color: var(--text-primary);
+  border: solid var(--accent) 1px;
+}
+
+.ContactPage .button:hover {
+  background-color: var(--accent);
+  border: none;
+}

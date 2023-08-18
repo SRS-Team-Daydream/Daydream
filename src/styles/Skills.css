@@ -1,0 +1,105 @@
+.SkillsPage {
+  transition: color 0.6s;
+  padding-bottom: 30px;
+  color: var(--text-primary);
+}
+
+.SkillsPage .skillTitle,
+.projectTitle {
+  font-size: 2vw;
+  padding: 0 0 0 3vw;
+  text-decoration: underline;
+}
+
+.SkillsPage .skillList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 3vw;
+  row-gap: 3vw;
+  margin-bottom: 6vh;
+}
+
+.SkillsPage .skill {
+  display: flex;
+  flex-direction: column;
+  animation: fadeInLeft 1s linear both;
+  transform: translateX(-600%);
+}
+
+.SkillsPage .skillLogo {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  max-height: 18vh;
+  min-height: 18vh;
+}
+
+.SkillsPage .skillName {
+  margin: 0;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.SkillsPage hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  height: 5px;
+  border-style: outset;
+}
+
+.SkillsPage .projectList {
+  padding: 0 3vw 0 3vw;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-50%);
+    filter: blur(5px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.SkillsPage li:nth-child(1) {
+  animation-delay: 600ms;
+}
+.SkillsPage li:nth-child(2) {
+  animation-delay: 400ms;
+}
+.SkillsPage li:nth-child(3) {
+  animation-delay: 200ms;
+}
+.SkillsPage li:nth-child(4) {
+  animation-delay: 0;
+}
+
+.SkillsPage li:nth-child(5) {
+  animation-delay: 2400ms;
+}
+.SkillsPage li:nth-child(6) {
+  animation-delay: 2200ms;
+}
+.SkillsPage li:nth-child(7) {
+  animation-delay: 2000ms;
+}
+.SkillsPage li:nth-child(8) {
+  animation-delay: 1800ms;
+}
+
+.SkillsPage li:nth-child(9) {
+  animation-delay: 4200ms;
+}
+.SkillsPage li:nth-child(10) {
+  animation-delay: 4000ms;
+}
+.SkillsPage li:nth-child(11) {
+  animation-delay: 3800ms;
+}
+.SkillsPage li:nth-child(12) {
+  animation-delay: 3600ms;
+}

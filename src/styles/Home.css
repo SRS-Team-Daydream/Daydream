@@ -1,0 +1,69 @@
+.HomePage {
+  transition: color 0.6s;
+  color: var(--text-primary);
+}
+
+.HomePage .greeting {
+  padding: 0 0 70px 0;
+  font-size: 4vw;
+  animation: fadeIn 1.5s ease-in-out both;
+  opacity: 0;
+}
+
+.HomePage p {
+  text-align: center;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.HomePage .details {
+  font-size: 2vw;
+  padding: 0 150px 0 150px;
+  animation: slideFadeIn 1.5s 0.7s ease-in-out both;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.bot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  animation: fadeIn 1.5s 2.2s ease-in-out both;
+  opacity: 0;
+}
+
+.bot svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 155px;
+}
+
+.bot .shape-fill {
+  fill: var(--accent);
+}
