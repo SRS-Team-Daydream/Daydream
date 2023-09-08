@@ -1,0 +1,21 @@
+.projectDisplay {
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.6s;
+}
+
+.projectDisplay .projectName {
+  margin-bottom: 1vh;
+  font-size: 3vh;
+}
+
+.projectDisplay .image {
+  width: 50%;
+  object-fit: contain;
+  margin-bottom: 1vw;
+}
+
+.projectDisplay .capabilityList {
+  padding: 0 1vw 0 1vw;
+}

@@ -1,0 +1,64 @@
+.ResourcesPage {
+  transition: color 0.6s;
+  color: var(--text-primary);
+}
+
+.ResourcesPage p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.ResourcesPage .resourcesTitle {
+  font-size: 2vw;
+  margin-bottom: 3vh;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.ResourcesPage .resourceListItem {
+  display: flex;
+  padding-left: 4vw;
+  margin: 5px;
+  font-size: 1.5vw;
+  opacity: 0;
+  animation: fadeInLeftR 1.5s ease-in-out both;
+}
+
+.ResourcesPage .resourceListLink:link,
+.resourceListLink:visited {
+  color: var(--accent);
+  text-decoration: none;
+  padding-left: 1vw;
+}
+.ResourcesPage .resourceListLink:hover {
+  color: var(--text-primary);
+}
+
+.ResourcesPage .itemName {
+  width: 7vw;
+}
+
+.ResourcesPage .resourceIcon {
+  width: 100%;
+  object-fit: cover;
+  max-width: 2vw;
+  object-position: center;
+}
+
+.ResourcesPage .iconContainer {
+  width: 4vw;
+}
+
+@keyframes fadeInLeftR {
+  0% {
+    transition: all 0.8s;
+    transform: translateX(-50%);
+    filter: blur(5px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}

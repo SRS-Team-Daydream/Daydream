@@ -1,0 +1,120 @@
+:root {
+  --background-primary: white;
+  --background-secondary: rgb(79, 79, 79);
+  --text-primary: rgb(0, 0, 0);
+  --text-secondary: white;
+  --accent: rgb(47, 177, 177);
+  --accent2: #f4994e;
+  --vertical-margin: 240px;
+  --default-font-size: 40px;
+  --bottomLink: url("public/assets/waveWhiteBG.svg");
+}
+
+[data-theme="dark"] {
+  --background-primary: rgb(79, 79, 79);
+  --background-secondary: rgb(39, 39, 39);
+  --text-primary: rgb(213, 213, 213);
+  --text-secondary: white;
+  --accent: rgb(47, 177, 177);
+  --accent2: #f4994e;
+  --bottomLink: url("public/assets/waveTransparentBG.svg");
+}
+
+.app {
+  background-color: var(--background-primary);
+  font-size: large;
+  font-weight: bold;
+  transition: all 0.6s;
+  min-height: 100vh;
+}
+
+.top-container {
+  transition: all 0.6s;
+  background-color: var(--background-primary);
+  z-index: 500;
+  position: fixed;
+  padding-left: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 99px;
+}
+
+.Left {
+  position: fixed;
+  background-color: inherit;
+  z-index: 2000;
+  top: 99px;
+  left: 0;
+  width: 13vw;
+  height: 86vh;
+  border-right: solid 1px gray;
+}
+.Middle {
+  background-color: inherit;
+  margin: 0 13vw 0 13vw;
+  padding-top: 99px;
+}
+.Right {
+  position: fixed;
+  background-color: inherit;
+  z-index: 2000;
+  top: 99px;
+  right: 0;
+  width: 13vw;
+  height: 86vh;
+  border-left: solid 1px gray;
+}
+
+.AltLeft {
+  position: fixed;
+  background-color: inherit;
+  z-index: 2000;
+  top: 99px;
+  left: 0;
+  width: 13vw;
+  height: 74vh;
+  border-right: solid 1px gray;
+}
+.AltRight {
+  position: fixed;
+  background-color: inherit;
+  z-index: 2000;
+  top: 99px;
+  right: 0;
+  width: 13vw;
+  height: 74vh;
+  border-left: solid 1px gray;
+}
+
+.bottomEdge {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  aspect-ratio: 1858/150;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 3000;
+  animation: BottomfadeIn 1.5s 1s ease-in-out both;
+}
+
+.layer {
+  background-image: url("/assets/waveTransparentBG.svg");
+}
+
+@keyframes BottomfadeIn {
+  0% {
+    transform: all 0.6;
+    filter: blur(5px);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
